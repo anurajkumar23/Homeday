@@ -6,20 +6,51 @@
       "name": "Home Cleaning",
       "description": "Professional home cleaning services",
       "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop",
-      "services": [
+      "popular": true,
+      "subCategories": [
         {
-          "id": 1,
-          "name": "Deep House Cleaning",
-          "price": "$80-120",
-          "rating": 4.8,
-          "reviews": 245
+          "id": 101,
+          "name": "Deep Cleaning",
+          "popular": true,
+          "products": [
+            {
+              "id": 1,
+              "name": "Deep House Cleaning",
+              "price": "₹80-120",
+              "rating": 4.8,
+              "reviews": 245,
+              "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": true
+            },
+            {
+              "id": 2,
+              "name": "Kitchen Deep Clean",
+              "price": "₹60-100",
+              "rating": 4.7,
+              "reviews": 132,
+              "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": false
+            }
+          ]
         },
         {
-          "id": 2,
+          "id": 102,
           "name": "Regular Cleaning",
-          "price": "$50-80",
-          "rating": 4.7,
-          "reviews": 189
+          "popular": false,
+          "products": [
+            {
+              "id": 3,
+              "name": "Regular Cleaning",
+              "price": "₹50-80",
+              "rating": 4.7,
+              "reviews": 189,
+              "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": true
+            }
+          ]
         }
       ]
     },
@@ -28,20 +59,41 @@
       "name": "Plumbing",
       "description": "Expert plumbing repair and installation",
       "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&h=300&fit=crop",
-      "services": [
+      "popular": true,
+      "subCategories": [
         {
-          "id": 3,
-          "name": "Pipe Repair",
-          "price": "$60-100",
-          "rating": 4.9,
-          "reviews": 156
+          "id": 201,
+          "name": "Repairs",
+          "popular": true,
+          "products": [
+            {
+              "id": 4,
+              "name": "Pipe Repair",
+              "price": "₹60-100",
+              "rating": 4.9,
+              "reviews": 156,
+              "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": false
+            }
+          ]
         },
         {
-          "id": 4,
-          "name": "Faucet Installation",
-          "price": "$40-80",
-          "rating": 4.6,
-          "reviews": 98
+          "id": 202,
+          "name": "Installations",
+          "popular": false,
+          "products": [
+            {
+              "id": 5,
+              "name": "Faucet Installation",
+              "price": "₹40-80",
+              "rating": 4.6,
+              "reviews": 98,
+              "image": "https://images.unsplash.com/photo-1626908013551-89d7f7d1bca8?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": true
+            }
+          ]
         }
       ]
     },
@@ -50,20 +102,34 @@
       "name": "Electrical",
       "description": "Licensed electrical services",
       "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop",
-      "services": [
+      "popular": false,
+      "subCategories": [
         {
-          "id": 5,
-          "name": "Wiring Installation",
-          "price": "$100-200",
-          "rating": 4.8,
-          "reviews": 134
-        },
-        {
-          "id": 6,
-          "name": "Light Fixture Setup",
-          "price": "$30-60",
-          "rating": 4.7,
-          "reviews": 87
+          "id": 301,
+          "name": "Wiring",
+          "popular": true,
+          "products": [
+            {
+              "id": 6,
+              "name": "Wiring Installation",
+              "price": "₹100-200",
+              "rating": 4.8,
+              "reviews": 134,
+              "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": false
+            },
+            {
+              "id": 7,
+              "name": "Light Fixture Setup",
+              "price": "₹30-60",
+              "rating": 4.7,
+              "reviews": 87,
+              "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": true
+            }
+          ]
         }
       ]
     },
@@ -72,20 +138,34 @@
       "name": "Appliance Repair",
       "description": "Fix all your home appliances",
       "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-      "services": [
+      "popular": true,
+      "subCategories": [
         {
-          "id": 7,
-          "name": "Washing Machine Repair",
-          "price": "$70-120",
-          "rating": 4.6,
-          "reviews": 203
-        },
-        {
-          "id": 8,
-          "name": "Refrigerator Service",
-          "price": "$80-150",
-          "rating": 4.8,
-          "reviews": 167
+          "id": 401,
+          "name": "Kitchen Appliances",
+          "popular": true,
+          "products": [
+            {
+              "id": 8,
+              "name": "Refrigerator Service",
+              "price": "₹80-150",
+              "rating": 4.8,
+              "reviews": 167,
+              "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": false
+            },
+            {
+              "id": 9,
+              "name": "Microwave Repair",
+              "price": "₹50-110",
+              "rating": 4.6,
+              "reviews": 93,
+              "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": false
+            }
+          ]
         }
       ]
     },
@@ -94,20 +174,41 @@
       "name": "Painting",
       "description": "Interior and exterior painting",
       "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop",
-      "services": [
+      "popular": false,
+      "subCategories": [
         {
-          "id": 9,
-          "name": "Interior Painting",
-          "price": "$200-500",
-          "rating": 4.7,
-          "reviews": 178
+          "id": 501,
+          "name": "Exterior",
+          "popular": true,
+          "products": [
+            {
+              "id": 10,
+              "name": "Exterior Painting",
+              "price": "₹300-800",
+              "rating": 4.9,
+              "reviews": 145,
+              "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": false
+            }
+          ]
         },
         {
-          "id": 10,
-          "name": "Exterior Painting",
-          "price": "$300-800",
-          "rating": 4.9,
-          "reviews": 145
+          "id": 502,
+          "name": "Interior",
+          "popular": false,
+          "products": [
+            {
+              "id": 11,
+              "name": "Interior Painting",
+              "price": "₹200-500",
+              "rating": 4.7,
+              "reviews": 178,
+              "image": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": true
+            }
+          ]
         }
       ]
     },
@@ -116,60 +217,36 @@
       "name": "Carpentry",
       "description": "Custom woodwork and furniture",
       "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&h=300&fit=crop",
-      "services": [
+      "popular": false,
+      "subCategories": [
         {
-          "id": 11,
-          "name": "Furniture Assembly",
-          "price": "$40-80",
-          "rating": 4.5,
-          "reviews": 234
-        },
-        {
-          "id": 12,
-          "name": "Custom Shelving",
-          "price": "$100-250",
-          "rating": 4.8,
-          "reviews": 112
+          "id": 601,
+          "name": "Assembly",
+          "popular": true,
+          "products": [
+            {
+              "id": 12,
+              "name": "Furniture Assembly",
+              "price": "₹40-80",
+              "rating": 4.5,
+              "reviews": 234,
+              "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=300&h=200&fit=crop",
+              "popular": false,
+              "popularSearch": true
+            },
+            {
+              "id": 13,
+              "name": "Custom Shelving",
+              "price": "₹100-250",
+              "rating": 4.8,
+              "reviews": 112,
+              "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=300&h=200&fit=crop",
+              "popular": true,
+              "popularSearch": false
+            }
+          ]
         }
       ]
-    }
-  ],
-  "popularServices": [
-    {
-      "id": 1,
-      "name": "Deep House Cleaning",
-      "category": "Home Cleaning",
-      "price": "$80-120",
-      "rating": 4.8,
-      "reviews": 245,
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 3,
-      "name": "Pipe Repair",
-      "category": "Plumbing",
-      "price": "$60-100",
-      "rating": 4.9,
-      "reviews": 156,
-      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 5,
-      "name": "Wiring Installation",
-      "category": "Electrical",
-      "price": "$100-200",
-      "rating": 4.8,
-      "reviews": 134,
-      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 10,
-      "name": "Exterior Painting",
-      "category": "Painting",
-      "price": "$300-800",
-      "rating": 4.9,
-      "reviews": 145,
-      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=200&fit=crop"
     }
   ]
 }

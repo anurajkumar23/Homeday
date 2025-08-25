@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/Navbar"
 import { HeroSection } from "@/components/layout/HeroSection"
 import { ServiceCategories } from "@/components/layout/HomePage/ServicesCatergory/ServicesCatergory"
+import { PopularServices } from "@/components/layout/HomePage/PopularServices/PopularServices"
 
 export default function HomePage() {
   return (
@@ -16,8 +17,8 @@ export default function HomePage() {
       <main >
         <HeroSection />
          <ServiceCategories />
-        {/* <PopularServices />
-        <HowItWorks />
+         <PopularServices />
+        {/* <HowItWorks />
         <Testimonials /> */} 
       </main>
       <Footer />
