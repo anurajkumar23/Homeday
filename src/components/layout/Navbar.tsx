@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Search,
@@ -41,7 +41,7 @@ export function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur-md shadow-sm">
+      <nav className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur-md shadow-sm" role="navigation" aria-label="Primary">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
@@ -63,7 +63,7 @@ export function Navbar() {
             </Link>
 
             {/* Search (Desktop) */}
-            <div className=" md:flex flex-1 justify-center px-6">
+            <div className="hidden md:flex flex-1 justify-center px-6">
               <SearchBar />
             </div>
 
@@ -106,6 +106,9 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
               <button
+                aria-label="Toggle menu"
+                aria-controls="mobile-menu"
+                aria-expanded={isMenuOpen}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition"
               >
@@ -114,9 +117,12 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Search (Mobile) */}
+          {/* Search (Mobile + Links) */}
           {isMenuOpen && (
-            <div className="md:hidden border-t pt-3 pb-4 space-y-3">
+            <div id="mobile-menu" className="md:hidden border-t pt-3 pb-4 space-y-3">
+              <div className="px-0">
+                <SearchBar />
+              </div>
               {/* Mobile Links */}
               <Link
                 href="/bookings"

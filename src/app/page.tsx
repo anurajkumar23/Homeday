@@ -4,19 +4,21 @@ import { Header } from "@/components/layout/header"
 // import { FeaturesSection } from "@/components/features-section"
 // import { TestimonialsSection } from "@/components/testimonials-section"
 import { Footer } from "@/components/layout/footer"
-import HeroSection from "@/components/layout/hero-section"
+
 import { Navbar } from "@/components/layout/Navbar"
+import { HeroSection } from "@/components/layout/HeroSection"
+import { ServiceCategories } from "@/components/layout/HomePage/ServicesCatergory/ServicesCatergory"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <Navbar />
-      <main>
+      <main >
         <HeroSection />
-        {/* <ServiceCategories />
-        <PopularServices />
+         <ServiceCategories />
+        {/* <PopularServices />
         <HowItWorks />
-        <Testimonials /> */}
+        <Testimonials /> */} 
       </main>
       <Footer />
     </div>

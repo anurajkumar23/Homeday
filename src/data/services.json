@@ -1,0 +1,175 @@
+
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Home Cleaning",
+      "description": "Professional home cleaning services",
+      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 1,
+          "name": "Deep House Cleaning",
+          "price": "$80-120",
+          "rating": 4.8,
+          "reviews": 245
+        },
+        {
+          "id": 2,
+          "name": "Regular Cleaning",
+          "price": "$50-80",
+          "rating": 4.7,
+          "reviews": 189
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Plumbing",
+      "description": "Expert plumbing repair and installation",
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 3,
+          "name": "Pipe Repair",
+          "price": "$60-100",
+          "rating": 4.9,
+          "reviews": 156
+        },
+        {
+          "id": 4,
+          "name": "Faucet Installation",
+          "price": "$40-80",
+          "rating": 4.6,
+          "reviews": 98
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Electrical",
+      "description": "Licensed electrical services",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 5,
+          "name": "Wiring Installation",
+          "price": "$100-200",
+          "rating": 4.8,
+          "reviews": 134
+        },
+        {
+          "id": 6,
+          "name": "Light Fixture Setup",
+          "price": "$30-60",
+          "rating": 4.7,
+          "reviews": 87
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Appliance Repair",
+      "description": "Fix all your home appliances",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 7,
+          "name": "Washing Machine Repair",
+          "price": "$70-120",
+          "rating": 4.6,
+          "reviews": 203
+        },
+        {
+          "id": 8,
+          "name": "Refrigerator Service",
+          "price": "$80-150",
+          "rating": 4.8,
+          "reviews": 167
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Painting",
+      "description": "Interior and exterior painting",
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 9,
+          "name": "Interior Painting",
+          "price": "$200-500",
+          "rating": 4.7,
+          "reviews": 178
+        },
+        {
+          "id": 10,
+          "name": "Exterior Painting",
+          "price": "$300-800",
+          "rating": 4.9,
+          "reviews": 145
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Carpentry",
+      "description": "Custom woodwork and furniture",
+      "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&h=300&fit=crop",
+      "services": [
+        {
+          "id": 11,
+          "name": "Furniture Assembly",
+          "price": "$40-80",
+          "rating": 4.5,
+          "reviews": 234
+        },
+        {
+          "id": 12,
+          "name": "Custom Shelving",
+          "price": "$100-250",
+          "rating": 4.8,
+          "reviews": 112
+        }
+      ]
+    }
+  ],
+  "popularServices": [
+    {
+      "id": 1,
+      "name": "Deep House Cleaning",
+      "category": "Home Cleaning",
+      "price": "$80-120",
+      "rating": 4.8,
+      "reviews": 245,
+      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Pipe Repair",
+      "category": "Plumbing",
+      "price": "$60-100",
+      "rating": 4.9,
+      "reviews": 156,
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Wiring Installation",
+      "category": "Electrical",
+      "price": "$100-200",
+      "rating": 4.8,
+      "reviews": 134,
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Exterior Painting",
+      "category": "Painting",
+      "price": "$300-800",
+      "rating": 4.9,
+      "reviews": 145,
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=200&fit=crop"
+    }
+  ]
+}
