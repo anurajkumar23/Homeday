@@ -61,9 +61,9 @@ export default function StickyCategoriesBar() {
                 <button
                   key={cat.id}
                   onClick={() => handleClick(cat.id)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shrink-0"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-[#204099]/5 transition-colors shrink-0"
                 >
-                  <Icon className="h-4 w-4 text-primary" />
+                  <Icon className="h-4 w-4 text-[#204099]" />
                   <span className="whitespace-nowrap">{cat.name}</span>
                 </button>
               );

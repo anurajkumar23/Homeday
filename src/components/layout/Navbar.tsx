@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Search,
   Menu,
@@ -45,14 +46,16 @@ export function Navbar() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 group">
-              <div
-                className="h-10 w-10 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden"
-                style={{ backgroundColor: brandColor }}
-              >
-                <span className="text-white font-bold text-lg relative z-10">
-                  H
-                </span>
+            <Link href="/" className="flex items-center space-x-2 group" aria-label="Homeday home">
+              <div className="h-10 w-10 rounded-xl shadow-lg relative overflow-hidden bg-white">
+                <Image
+                  src="/Homeday%20logos-512.png"
+                  alt="Homeday logo"
+                  width={40}
+                  height={40}
+                  priority
+                  className="object-contain"
+                />
               </div>
               <span
                 className="text-xl font-bold group-hover:scale-105 transition-transform duration-200"

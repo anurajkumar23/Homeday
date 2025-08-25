@@ -35,7 +35,7 @@ export default function ServiceShowcase() {
         </div>
         <div className="flex items-center text-xs opacity-75">
           <Clock className="h-3 w-3 mr-1" />
-          Starting from $299
+          Starting from ₹299
         </div>
       </div>
     </div>

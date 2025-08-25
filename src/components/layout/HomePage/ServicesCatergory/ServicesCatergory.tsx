@@ -49,13 +49,13 @@ export function ServiceCategories() {
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Categories List - Left Side */}
           <div className="lg:col-span-4 space-y-3">
-            <h3 className="text-lg font-semibold mb-4">Service Categories</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[#204099]">Service Categories</h3>
             {servicesData.categories.map((category) => (
               <Card
                 key={category.id}
                 className={`cursor-pointer transition-all duration-200 hover:shadow-md ${
                   selectedCategory.id === category.id
-                    ? "ring-2 ring-primary bg-primary/5"
+                    ? "ring-2 ring-[#204099] bg-[#204099]/5"
                     : "hover:bg-muted/50"
                 }`}
                 onClick={() => setSelectedCategory(category)}

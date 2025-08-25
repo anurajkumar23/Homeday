@@ -14,10 +14,10 @@ export function PopularServices() {
     .slice(0, 8);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50/30 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-20 bg-gradient-to-b from-white to-[#204099]/5 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-sm font-medium mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#204099]/10 text-[#204099] dark:bg-[#204099]/30 dark:text-white text-sm font-medium mb-4">
             <Sparkles className="h-4 w-4 mr-2" />
             Most Booked Services
           </div>
@@ -84,7 +84,7 @@ export function PopularServices() {
                 {/* Rating and price */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-1">
-                    <div className="flex items-center bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded-md">
+                    <div className="flex items-center bg-[#204099]/10 dark:bg-[#204099]/25 px-2 py-1 rounded-md">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                       <span className="font-semibold text-gray-900 dark:text-white ml-1 text-sm">
                         {service.rating}
@@ -96,7 +96,7 @@ export function PopularServices() {
                   </div>
                   
                   <div className="text-right">
-                    <div className="font-bold text-xl text-gray-900 dark:text-white">
+                    <div className="font-bold text-xl text-[#204099] dark:text-white">
                       {service.price}
                     </div>
                     <div className="text-xs text-muted-foreground">
@@ -107,11 +107,11 @@ export function PopularServices() {
 
                 {/* Service features */}
                 <div className="flex items-center justify-between text-sm mb-4">
-                  <div className="flex items-center text-green-600 dark:text-green-400">
+                  <div className="flex items-center text-emerald-600 dark:text-emerald-400">
                     <Clock className="h-4 w-4 mr-1" />
                     <span className="font-medium">Same Day</span>
                   </div>
-                  <div className="flex items-center text-blue-600 dark:text-blue-400">
+                  <div className="flex items-center text-[#204099] dark:text-[#99aee6]">
                     <Shield className="h-4 w-4 mr-1" />
                     <span className="font-medium">Insured</span>
                   </div>
@@ -122,7 +122,7 @@ export function PopularServices() {
                   <div className="space-y-2 mb-4">
                     {service.highlights.slice(0, 2).map((highlight: string, index: number) => (
                       <div key={index} className="flex items-center text-sm text-muted-foreground">
-                        <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-emerald-600 mr-2 flex-shrink-0" />
                         <span className="line-clamp-1">{highlight}</span>
                       </div>
                     ))}
@@ -131,7 +131,7 @@ export function PopularServices() {
 
                 {/* Book button */}
                 <Button 
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 transition-all duration-300 group-hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#183a8a] hover:to-[#122a64] text-white font-semibold py-3 transition-all duration-300 group-hover:shadow-lg"
                   size="lg"
                 >
                   Book Now
@@ -144,7 +144,7 @@ export function PopularServices() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-[#204099]/5 to-[#204099]/10 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Can't find what you're looking for?
             </h3>
@@ -155,13 +155,13 @@ export function PopularServices() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="min-w-[200px] border-2 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
+                className="min-w-[200px] border-2 text-[#204099] dark:text-white hover:bg-[#204099]/5 dark:hover:bg-gray-700"
               >
                 Browse All Services
               </Button>
               <Button 
                 size="lg" 
-                className="min-w-[200px] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                className="min-w-[200px] bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#183a8a] hover:to-[#122a64]"
               >
                 Contact Support
               </Button>

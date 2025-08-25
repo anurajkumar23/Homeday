@@ -70,7 +70,7 @@ export function HeroSection() {
                 </div>
                 <Button
                   onClick={handleSearch}
-                  className="w-full h-12 text-lg font-semibold"
+                  className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#183a8a] hover:to-[#122a64] text-white"
                   size="lg"
                 >
                   Find Services
@@ -89,7 +89,7 @@ export function HeroSection() {
                     key={index}
                     variant="outline"
                     size="sm"
-                    className="rounded-full"
+                    className="rounded-full border-[#204099] text-[#204099] hover:bg-[#204099]/5"
                     onClick={() => setSearchQuery(search)}
                   >
                     {search}
