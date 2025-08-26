@@ -14,9 +14,11 @@ const iconMap: Record<string, any> = {
 
 export default function MobileCategoriesGrid() {
   const onClick = (id: number) => {
-    window.dispatchEvent(new CustomEvent("selectCategory", { detail: { id } }));
-    const anchor = document.getElementById("service-categories");
-    if (anchor) anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("selectCategory", { detail: { id } }));
+      const anchor = document.getElementById("service-categories");
+      if (anchor) anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (

@@ -50,9 +50,9 @@ export default function StickyCategoriesBar() {
       aria-hidden={!visible}
       className={`fixed left-0 right-0 z-30 transition-all ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
-      } ${atTop ? "top-16" : "top-16"}`}
+      } ${atTop ? "top-18" : "top-18"}`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container ">
         <div className="bg-white/90 dark:bg-gray-900/80 backdrop-blur border rounded-xl shadow-sm">
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar p-2">
             {servicesData.categories.map((cat) => {
