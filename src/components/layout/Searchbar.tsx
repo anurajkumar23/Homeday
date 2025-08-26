@@ -110,7 +110,7 @@ const SearchBar = () => {
     >
       {/* Left Side - Location Selector */}
       <div
-        className="relative md:w-1/3 w-full border-b md:border-b-0 md:border-r border-gray-200"
+        className="relative hidden md:block md:w-1/3 w-full border-b md:border-b-0 md:border-r border-gray-200"
         ref={locationRef}
       >
         <button

@@ -91,7 +91,7 @@ export function ServiceCategories() {
           </div>
 
           {/* Selected Category Details - Right Side */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 hidden md:block">
             <div key={animateKey} className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
               {/* Category Header */}
               <div className="flex items-center space-x-6">
@@ -141,7 +141,7 @@ export function ServiceCategories() {
                   ?.map((product: any) => (
                     <Card key={product.id} className="hover:shadow-lg transition-shadow">
                       <CardHeader>
-                        <div className="flex justify-between items-start">
+                        <div className="flex justify-between space-x-4 items-start">
                           <CardTitle className="text-lg">{product.name}</CardTitle>
                           <Badge variant="outline" className="text-primary font-semibold">
                             {product.price}

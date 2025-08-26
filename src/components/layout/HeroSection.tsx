@@ -9,6 +9,9 @@ import { Card } from "@/components/ui/card";
 import ServiceShowcase from "./HomePage/HeroCard/ShowCase";
 import StickyCategoriesBar from "./HomePage/ServicesCatergory/StickyCategoriesBar";
 import servicesData from "@/data/services.json";
+// MobileStickySearch was moved into Navbar compact mode
+import MobileCategoriesGrid from "./HomePage/ServicesCatergory/MobileCategoriesGrid";
+import MobileStickySearch from "./HomePage/MobileStickySearch";
 
 export function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,11 +31,12 @@ export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-16">
       <StickyCategoriesBar />
+      {/* <MobileStickySearch /> */}
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-4 hidden md:block">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Find trusted
                 <span className="text-primary block">local services</span>
@@ -44,7 +48,7 @@ export function HeroSection() {
             </div>
 
             {/* Search Form */}
-            <Card className="p-6 shadow-lg">
+            <Card className="p-6 shadow-lg hidden md:block">
               <div className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="relative">
@@ -77,6 +81,9 @@ export function HeroSection() {
                 </Button>
               </div>
             </Card>
+
+            {/* Mobile categories grid */}
+            <MobileCategoriesGrid />
 
             {/* Popular Searches */}
             <div className="space-y-3">
