@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ServiceHub - Find Trusted Local Services",
+  title: "Homeday - Find Trusted Local Services",
   description: "Connect with skilled professionals for all your home service needs. Book instantly, get it done right.",
 };
 

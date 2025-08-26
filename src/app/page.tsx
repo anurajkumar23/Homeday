@@ -9,6 +9,7 @@ import { Navbar } from "@/components/layout/Navbar"
 import { HeroSection } from "@/components/layout/HeroSection"
 import { ServiceCategories } from "@/components/layout/HomePage/ServicesCatergory/ServicesCatergory"
 import { PopularServices } from "@/components/layout/HomePage/PopularServices/PopularServices"
+import { HowItWorks } from "@/components/layout/HomePage/HowItWorks/page"
 
 export default function HomePage() {
   return (
@@ -18,8 +19,8 @@ export default function HomePage() {
         <HeroSection />
          <ServiceCategories />
          <PopularServices />
-        {/* <HowItWorks />
-        <Testimonials /> */} 
+         <HowItWorks />
+        {/*<Testimonials /> */} 
       </main>
       <Footer />
     </div>

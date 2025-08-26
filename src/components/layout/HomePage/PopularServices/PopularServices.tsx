@@ -11,7 +11,7 @@ export function PopularServices() {
   const popularProducts = (servicesData.categories || [])
     .flatMap((c: any) => (c.subCategories || []).flatMap((sc: any) => (sc.products || []).map((p: any) => ({ ...p, category: c.name }))))
     .filter((p: any) => p.popular)
-    .slice(0, 8);
+    .slice(0, 4);
 
   return (
     <section className="py-20 bg-gradient-to-b from-white to-[#204099]/5 dark:from-gray-900 dark:to-gray-800">
