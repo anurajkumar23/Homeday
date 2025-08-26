@@ -50,11 +50,11 @@ export default function StickyCategoriesBar() {
       aria-hidden={!visible}
       className={`fixed left-0 right-0 z-30 transition-all ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
-      } ${atTop ? "top-18" : "top-18"}`}
+      } ${atTop ? "top-17 md:top-16 " : "md:top-16 top-17"}`}
     >
       <div className="container ">
         <div className="bg-white/90 dark:bg-gray-900/80 backdrop-blur border rounded-xl shadow-sm">
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar p-2">
+          <div className="flex items-center gap-2 overflow-x-auto  no-scrollbar p-2">
             {servicesData.categories.map((cat) => {
               const Icon = iconByCategory[cat.name] ?? Sparkles;
               return (

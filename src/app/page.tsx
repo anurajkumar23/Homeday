@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/footer"
 
 import  Navbar from "@/components/layout/Navbar"
 import { HeroSection } from "@/components/layout/HeroSection"
-import { ServiceCategories } from "@/components/layout/HomePage/ServicesCatergory/ServicesCatergory"
+import  ServiceCategories  from "@/components/layout/HomePage/ServicesCatergory/ServicesCatergory"
 import { PopularServices } from "@/components/layout/HomePage/PopularServices/PopularServices"
 import { HowItWorks } from "@/components/layout/HomePage/HowItWorks/page"
 
