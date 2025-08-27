@@ -12,6 +12,7 @@ import servicesData from "@/data/services.json";
 // MobileStickySearch was moved into Navbar compact mode
 import MobileCategoriesGrid from "./HomePage/ServicesCatergory/MobileCategoriesGrid";
 import MobileStickySearch from "./HomePage/MobileStickySearch";
+import PopularSearches from "./HomePage/PopularSearches/PopularSearches";
 
 export function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,13 +30,17 @@ export function HeroSection() {
     .slice(0, 8);
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-16">
+    <section className="relative bg-gradient-to-br pb-4 from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800  md:py-16">
       <StickyCategoriesBar />
+      {/* Full-bleed mobile categories slider */}
+      <div>
+      <MobileCategoriesGrid />
+      </div>
       {/* <MobileStickySearch /> */}
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto ">
+        <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div>
             <div className="space-y-4 hidden md:block">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Find trusted
@@ -82,31 +87,16 @@ export function HeroSection() {
               </div>
             </Card>
 
-            {/* Mobile categories grid */}
-            <MobileCategoriesGrid />
+            {/* Mobile categories grid moved above container for full-bleed */}
 
             {/* Popular Searches */}
-            <div className="space-y-3">
-              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                Popular searches:
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {popularSearches.map((search, index) => (
-                  <Button
-                    key={index}
-                    variant="outline"
-                    size="sm"
-                    className="rounded-full border-[#204099] text-[#204099] hover:bg-[#204099]/5"
-                    onClick={() => setSearchQuery(search)}
-                  >
-                    {search}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <PopularSearches
+              items={popularSearches}
+              onSelect={(val) => setSearchQuery(val)}
+            />
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-3 gap-6 pl-4 pr-4 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">50K+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Service Providers</div>
