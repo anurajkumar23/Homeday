@@ -206,9 +206,8 @@ export default function Navbar() {
         <div className="sticky top-0 z-50 border-t bg-white/95 backdrop-blur-md md:hidden">
           {/* Small upward slide when rows collapse */}
           <div
-            className={`px-4 transition-transform duration-300 ${
-              shrink ? "-translate-y-0" : "translate-y-0"
-            } py-3`}
+            className="px-4 transition-transform duration-300 translate-y-0 py-3"
+          
           >
             <SearchBar />
           </div>
