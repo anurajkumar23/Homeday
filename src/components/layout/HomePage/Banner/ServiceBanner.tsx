@@ -42,8 +42,8 @@ export default function ServiceBanner({
   const totalBanners = effectiveBanners.length;
 
   // Calculate transform value - fix for last slide
-  const getTransformValue = useCallback(() => {
-    if (totalBanners <= 1) return 0;
+  const getTransformValue = useCallback((): string => {
+    if (totalBanners <= 1) return 'translateX(0)';
     
     // For the last slide, adjust to show it fully
     if (currentSlide === totalBanners - 1) {
@@ -194,10 +194,10 @@ export default function ServiceBanner({
   if (totalBanners === 0) return null;
 
   return (
-    <div className="w-full">
+    <div>
       {/* Main Slider Container */}
       <div
-        className="relative overflow-hidden pl-4 select-none"
+        className="relative overflow-x-auto scrollbar-hide pl-4 select-none"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
         onTouchStart={handleTouchStart}
@@ -226,7 +226,7 @@ export default function ServiceBanner({
               }}
             >
               {/* Image Container */}
-              <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+              <div className="relative h-[180px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
                 <Image
                   src={banner.image}
                   alt={`Service banner ${index + 1}`}
@@ -236,22 +236,10 @@ export default function ServiceBanner({
                   quality={90}
                   draggable={false}
                 />
-                
-                {/* Slide number indicator */}
-                <div className="absolute top-3 right-3 bg-black/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
-                  {index + 1}/{totalBanners}
-                </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Touch/Swipe instruction overlay (optional) */}
-        {totalBanners > 1 && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full opacity-50 pointer-events-none">
-            Swipe to navigate
-          </div>
-        )}
       </div>
 
       {/* Dots Indicator */}
@@ -293,6 +281,23 @@ export default function ServiceBanner({
           ))}
         </div>
       )}
+      
+      <style jsx>{`
+        .scrollbar-hide {
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .transform-gpu {
+          transform: translateZ(0);
+        }
+        .backface-visibility-hidden {
+          backface-visibility: hidden;
+        }
+      `}</style>
     </div>
   );
 }

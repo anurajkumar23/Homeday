@@ -37,7 +37,7 @@ export function HeroSection() {
       <div>
       <MobileCategoriesGrid />
       </div>      
-<div>
+<div className="md:hidden block bg-white">
       <ServiceBanner/>
 </div>
       {/* <MobileStickySearch /> */}
