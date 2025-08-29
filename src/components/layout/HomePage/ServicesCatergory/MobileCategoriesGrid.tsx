@@ -66,22 +66,22 @@ export default function MobileCategoriesGrid({
       )}
       
       <div
-        // ref={containerRef}
-        // className={`
-        //   w-full bg-white md:hidden
-        //   transition-all duration-300 ease-in-out
-        //   ${isSticky 
-        //     ? "fixed left-0 right-0 z-30 top-17 md:top-16 shadow-md transform translate-y-0" 
-        //     : "relative transform translate-y-0"
-        //   }
-        // `}
-        // style={{
-        //   transform: isSticky 
-        //     ? 'translateY(0) translateZ(0)' 
-        //     : 'translateY(0) translateZ(0)',
-        //   backfaceVisibility: 'hidden',
-        //   perspective: 1000
-        // }}
+        ref={containerRef}
+        className={`
+          w-full bg-white md:hidden
+          transition-all duration-300 ease-in-out
+          ${isSticky 
+            ? "fixed left-0 right-0 z-30 top-17 md:top-16 shadow-md transform translate-y-0" 
+            : "relative transform translate-y-0"
+          }
+        `}
+        style={{
+          transform: isSticky 
+            ? 'translateY(0) translateZ(0)' 
+            : 'translateY(0) translateZ(0)',
+          backfaceVisibility: 'hidden',
+          perspective: 1000
+        }}
       >
         <div className="py-4 transition-all duration-300 ease-in-out">
           {/* Horizontal scrolling container */}

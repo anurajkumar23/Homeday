@@ -6,15 +6,8 @@ import servicesData from "@/data/services.json";
 
 interface BannerItem {
   id: number;
-  title: string;
-  subtitle?: string;
-  description?: string;
   image: string;
   active?: boolean;
-  backgroundColor?: string;
-  textColor?: string;
-  buttonText?: string;
-  buttonLink?: string;
 }
 
 interface ServiceBannerProps {
@@ -33,9 +26,10 @@ export default function ServiceBanner({
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Touch states for mobile swipe
+  // Enhanced touch states for mobile swipe
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const effectiveBanners: BannerItem[] = useMemo(() => {
     const source = Array.isArray(banners) && banners.length > 0
@@ -47,9 +41,22 @@ export default function ServiceBanner({
 
   const totalBanners = effectiveBanners.length;
 
-  // Progress bar animation - exactly like the Intel banner
+  // Calculate transform value - fix for last slide
+  const getTransformValue = useCallback(() => {
+    if (totalBanners <= 1) return 0;
+    
+    // For the last slide, adjust to show it fully
+    if (currentSlide === totalBanners - 1) {
+      return `translateX(calc(-${currentSlide * 85}% + ${15}%))`;
+    }
+    
+    // Normal slides with 85% movement to show next slide preview
+    return `translateX(-${currentSlide * 85}%)`;
+  }, [currentSlide, totalBanners]);
+
+  // Progress bar animation
   useEffect(() => {
-    if (!autoPlay || totalBanners <= 1 || isHovered || isTransitioning) {
+    if (!autoPlay || totalBanners <= 1 || isHovered || isTransitioning || isDragging) {
       return;
     }
 
@@ -64,14 +71,14 @@ export default function ServiceBanner({
       } else {
         setProgress(progressPercent);
       }
-    }, 16); // 60fps for smooth animation
+    }, 16);
 
     return () => clearInterval(progressInterval);
-  }, [currentSlide, autoPlay, autoPlayInterval, totalBanners, isHovered, isTransitioning]);
+  }, [currentSlide, autoPlay, autoPlayInterval, totalBanners, isHovered, isTransitioning, isDragging]);
 
   // Auto-play functionality
   useEffect(() => {
-    if (!autoPlay || totalBanners <= 1 || isHovered || isTransitioning) return;
+    if (!autoPlay || totalBanners <= 1 || isHovered || isTransitioning || isDragging) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalBanners);
@@ -79,7 +86,7 @@ export default function ServiceBanner({
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
-  }, [autoPlay, autoPlayInterval, totalBanners, isHovered, isTransitioning]);
+  }, [autoPlay, autoPlayInterval, totalBanners, isHovered, isTransitioning, isDragging]);
 
   // Slide navigation
   const goToSlide = useCallback((index: number) => {
@@ -91,13 +98,14 @@ export default function ServiceBanner({
 
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 600);
+    }, 500);
   }, [currentSlide, isTransitioning]);
 
-  // Touch handlers
+  // Enhanced touch handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
+    setIsDragging(true);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -105,111 +113,186 @@ export default function ServiceBanner({
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (!touchStart || !touchEnd) {
+      setIsDragging(false);
+      return;
+    }
 
     const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const isLeftSwipe = distance > 20; // Very sensitive threshold
+    const isRightSwipe = distance < -20;
 
     if (isLeftSwipe && totalBanners > 1) {
       goToSlide((currentSlide + 1) % totalBanners);
     } else if (isRightSwipe && totalBanners > 1) {
       goToSlide((currentSlide - 1 + totalBanners) % totalBanners);
     }
+
+    setIsDragging(false);
   };
 
-  const handleButtonClick = useCallback(() => {
-    const currentBanner = effectiveBanners[currentSlide];
-    if (currentBanner?.buttonLink) {
-      window.open(currentBanner.buttonLink, '_blank');
+  // Mouse drag functionality for desktop
+  const [mouseStart, setMouseStart] = useState<number | null>(null);
+  const [mouseEnd, setMouseEnd] = useState<number | null>(null);
+  const [isMouseDragging, setIsMouseDragging] = useState(false);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setMouseEnd(null);
+    setMouseStart(e.clientX);
+    setIsMouseDragging(true);
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isMouseDragging) return;
+    setMouseEnd(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    if (!mouseStart || !mouseEnd) {
+      setIsMouseDragging(false);
+      setIsDragging(false);
+      return;
     }
-  }, [effectiveBanners, currentSlide]);
+
+    const distance = mouseStart - mouseEnd;
+    const isLeftSwipe = distance > 30;
+    const isRightSwipe = distance < -30;
+
+    if (isLeftSwipe && totalBanners > 1) {
+      goToSlide((currentSlide + 1) % totalBanners);
+    } else if (isRightSwipe && totalBanners > 1) {
+      goToSlide((currentSlide - 1 + totalBanners) % totalBanners);
+    }
+
+    setIsMouseDragging(false);
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseDragging(false);
+    setIsDragging(false);
+    setIsHovered(false);
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (totalBanners <= 1) return;
+    
+    if (e.key === 'ArrowLeft') {
+      goToSlide((currentSlide - 1 + totalBanners) % totalBanners);
+    } else if (e.key === 'ArrowRight') {
+      goToSlide((currentSlide + 1) % totalBanners);
+    }
+  }, [currentSlide, totalBanners, goToSlide]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
 
   if (totalBanners === 0) return null;
 
   return (
-    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 mt-4 md:mt-6 lg:mt-8">
-      <div className="w-full max-w-7xl mx-auto">
-        {/* Main Banner Card with Intel-style sliding */}
+    <div className="w-full">
+      {/* Main Slider Container */}
+      <div
+        className="relative overflow-hidden pl-4 select-none"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
+        {/* Sliding Container */}
         <div
-          className="relative w-full overflow-hidden rounded-2xl shadow-lg"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
+          className="flex transition-transform duration-500 ease-out"
+          style={{
+            transform: getTransformValue(),
+            transitionDuration: isDragging ? '0ms' : '500ms',
+          }}
         >
-          <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] w-full">
-
-            {/* SLIDING CONTENT CONTAINER - Like Intel banner */}
+          {effectiveBanners.map((banner, index) => (
             <div
-              className="flex h-full w-full transition-transform duration-700 ease-out"
-              style={{
-                transform: `translateX(-${currentSlide * 100}%)`,
+              key={banner.id}
+              className="flex-shrink-0"
+              style={{ 
+                width: '85%',
+                paddingRight: index === effectiveBanners.length - 1 ? '16px' : '8px'
               }}
             >
-              {effectiveBanners.map((banner, index) => (
-                <div
-                  key={banner.id}
-                  className="relative min-w-full h-full items-center"
-                >
-                  {/* Right Side - Image */}
-                  <div className= "h-full w-full ">
-                    <Image
-                      src={banner.image}
-                      alt={banner.title}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                      quality={90}
-                    />
-                  </div>
+              {/* Image Container */}
+              <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                <Image
+                  src={banner.image}
+                  alt={`Service banner ${index + 1}`}
+                  fill
+                  className="object-cover pointer-events-none"
+                  priority={index === 0}
+                  quality={90}
+                  draggable={false}
+                />
+                
+                {/* Slide number indicator */}
+                <div className="absolute top-3 right-3 bg-black/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
+                  {index + 1}/{totalBanners}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
-        {/* Dots and Progress Bar - Intel Style */}
+        {/* Touch/Swipe instruction overlay (optional) */}
         {totalBanners > 1 && (
-          <div className="flex justify-center mt-6 space-x-3">
-            {effectiveBanners.map((_, index) => (
-              <button
-                key={index}
-                aria-label={`Go to slide ${index + 1}`}
-                onClick={() => goToSlide(index)}
-                disabled={isTransitioning}
-                className={`
-          relative transition-all duration-300 ease-out
-          hover:scale-125 active:scale-90 rounded-full overflow-hidden
-          ${index === currentSlide
-                    ? 'w-8 h-2'
-                    : 'w-2 h-2 bg-gray-400 hover:bg-gray-600'
-                  }
-        `}
-              >
-                {/* Active dot with progress animation */}
-                {index === currentSlide ? (
-                  <>
-                    {/* Background */}
-                    <div className="absolute inset-0 bg-gray-400 rounded-full" />
-
-                    {/* Progress fill */}
-                    <div
-                      className="absolute inset-0 bg-gray-700 rounded-full transition-all ease-linear"
-                      style={{
-                        width: autoPlay && !isHovered ? `${progress}%` : '100%',
-                        transition: autoPlay && !isHovered ? 'width 0.1s linear' : 'width 0.3s ease',
-                      }}
-                    />
-                  </>
-                ) : null}
-              </button>
-            ))}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full opacity-50 pointer-events-none">
+            Swipe to navigate
           </div>
         )}
-
       </div>
+
+      {/* Dots Indicator */}
+      {totalBanners > 1 && (
+        <div className="flex justify-center mt-6 space-x-3 px-4">
+          {effectiveBanners.map((_, index) => (
+            <button
+              key={index}
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}
+              disabled={isTransitioning}
+              className={`
+                relative transition-all duration-300 ease-out
+                hover:scale-125 active:scale-90 rounded-full overflow-hidden
+                focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2
+                ${index === currentSlide
+                  ? 'w-8 h-2'
+                  : 'w-2 h-2 bg-gray-400 hover:bg-gray-600'
+                }
+              `}
+            >
+              {/* Active dot with progress animation */}
+              {index === currentSlide ? (
+                <>
+                  {/* Background */}
+                  <div className="absolute inset-0 bg-gray-400 rounded-full" />
+
+                  {/* Progress fill */}
+                  <div
+                    className="absolute inset-0 bg-gray-700 rounded-full transition-all ease-linear"
+                    style={{
+                      width: autoPlay && !isHovered && !isDragging ? `${progress}%` : '100%',
+                      transition: autoPlay && !isHovered && !isDragging ? 'width 0.1s linear' : 'width 0.3s ease',
+                    }}
+                  />
+                </>
+              ) : null}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
