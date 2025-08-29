@@ -11,12 +11,14 @@ import  ServiceCategories  from "@/components/layout/HomePage/ServicesCatergory/
 import { PopularServices } from "@/components/layout/HomePage/PopularServices/PopularServices"
 import { HowItWorks } from "@/components/layout/HomePage/HowItWorks/page"
 
+
 export default function HomePage() {
   return (
     <div className="min-h-screen ">
       <Navbar />
       <main >
         <HeroSection />
+       
          <ServiceCategories />
          <PopularServices />
          <HowItWorks />

@@ -47,7 +47,7 @@ export default function ServiceCategories() {
   const Details = (
     <div key={animateKey} className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
       {/* header */}
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 ">
         <div className="relative h-24 w-24 overflow-hidden rounded-xl">
           <Image src={category.image} alt={category.name} fill className="object-cover" />
         </div>
@@ -64,24 +64,51 @@ export default function ServiceCategories() {
         </div>
       </div>
 
-      {/* sub-category tabs */}
-      <div className="flex flex-wrap gap-2">
-        {category.subCategories?.map(sub => (
-          <button
-            key={sub.id}
-            onClick={() => setSubId(sub.id)}
-            className={`rounded-full border px-3 py-1 text-sm transition
-              ${subId === sub.id
-                ? "bg-primary text-white border-primary"
-                : "bg-transparent text-foreground hover:bg-muted border-border"}`}
-          >
-            {sub.name}
-          </button>
-        ))}
+      {/* sub-category grid - Compact style */}
+      <div className="space-y-4">
+        <h4 className="text-lg font-semibold text-gray-900">Choose a service</h4>
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {category.subCategories?.map(sub => {
+            const isSelected = subId === sub.id;
+
+            return (
+              <button
+                key={sub.id}
+                onClick={() => setSubId(sub.id)}
+                className="group flex flex-col items-center p-3 rounded-xl transition-all duration-200 hover:bg-gray-50"
+              >
+                {/* Circular image container */}
+                <div className={`relative h-14 w-14 overflow-hidden rounded-full mb-2 transition-all duration-200 ${isSelected
+                    ? 'ring-2 ring-blue-500 ring-offset-2 shadow-lg'
+                    : 'group-hover:shadow-md'
+                  }`}>
+                  <Image
+                    src={sub.image}
+                    alt={sub.name}
+                    fill
+                    className="object-cover transition-transform duration-200 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Service name */}
+                <span className={`text-xs font-medium text-center leading-tight transition-colors ${isSelected ? 'text-blue-600' : 'text-gray-700'
+                  }`}>
+                  {sub.name}
+                </span>
+
+                {/* Selection dot */}
+                {isSelected && (
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1 animate-in zoom-in duration-200" />
+                )}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
+
       {/* products */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="md:grid gap-6 md:grid-cols-2 hidden ">
         {currentSub?.products?.map(p => (
           <Card key={p.id} className="transition-shadow hover:shadow-lg">
             <CardHeader>
@@ -109,7 +136,7 @@ export default function ServiceCategories() {
       </div>
 
       {/* view-all */}
-      <div className="pt-6 text-center">
+      <div className="pt-6 text-center hidden md:block">
         <Button variant="outline" size="lg" className="min-w-[200px]">
           View All {category.name} Services
           <ArrowRight className="ml-2 h-4 w-4" />
@@ -120,7 +147,7 @@ export default function ServiceCategories() {
 
   /* ───────── JSX ───────── */
   return (
-    <section id="service-categories" ref={sectionRef} className="bg-background py-20">
+    <section id="service-categories" ref={sectionRef} className="bg-background py-20 hidden md:block">
       <div className="container mx-auto px-4">
         {/* heading */}
         <div className="mb-12 text-center">
@@ -183,7 +210,7 @@ export default function ServiceCategories() {
       <Sheet open={drawerOpen} onOpenChange={setDrawerOpen}>
         <SheetContent
           side="bottom"
-          className="h-[85vh] rounded-t-3xl p-6 md:hidden overflow-y-auto"
+          className="h-auto rounded-t-3xl p-6 md:hidden overflow-y-auto"
         >
           <SheetHeader className="mb-6 text-center">
             <SheetTitle className="text-xl font-semibold">{category.name}</SheetTitle>

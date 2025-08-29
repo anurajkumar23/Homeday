@@ -8,11 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import ServiceShowcase from "./HomePage/HeroCard/ShowCase";
 import StickyCategoriesBar from "./HomePage/ServicesCatergory/StickyCategoriesBar";
-import servicesData from "@/data/services.json";
 // MobileStickySearch was moved into Navbar compact mode
 import MobileCategoriesGrid from "./HomePage/ServicesCatergory/MobileCategoriesGrid";
 import MobileStickySearch from "./HomePage/MobileStickySearch";
 import PopularSearches from "./HomePage/PopularSearches/PopularSearches";
+import ServiceBanner from "@/components/layout/HomePage/Banner/ServiceBanner"
+import servicesData from "@/data/services.json"
 
 export function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -35,7 +36,10 @@ export function HeroSection() {
       {/* Full-bleed mobile categories slider */}
       <div>
       <MobileCategoriesGrid />
-      </div>
+      </div>      
+<div>
+      <ServiceBanner/>
+</div>
       {/* <MobileStickySearch /> */}
       <div className="container mx-auto ">
         <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
