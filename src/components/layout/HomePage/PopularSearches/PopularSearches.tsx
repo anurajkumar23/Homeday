@@ -20,7 +20,7 @@ export default function PopularSearches({ items, onSelect }: PopularSearchesProp
 
         {/* Mobile: horizontal slider with proper padding */}
         <div className="md:hidden">
-          <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1 pl-4 pr-4">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide pl-4 pr-4">
             {items.map((search, index) => (
               <button
                 key={`${search}-${index}`}

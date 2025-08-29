@@ -37,7 +37,7 @@ export function HeroSection() {
       <div>
       <MobileCategoriesGrid />
       </div>      
-<div className="md:hidden block bg-white">
+<div className="md:hidden block bg-white pb-4">
       <ServiceBanner/>
 </div>
       {/* <MobileStickySearch /> */}
@@ -100,7 +100,7 @@ export function HeroSection() {
             />
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pl-4 pr-4 pt-8">
+            <div className="md:grid grid-cols-3 gap-6 pl-4 pr-4 pt-8 hidden">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">50K+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Service Providers</div>
