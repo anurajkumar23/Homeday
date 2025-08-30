@@ -31,21 +31,24 @@ export function HeroSection() {
     .slice(0, 8);
 
   return (
-    <section className="relative bg-gradient-to-br pb-4 from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800  md:py-16">
+    <>
       <StickyCategoriesBar />
-      {/* Full-bleed mobile categories slider */}
       <div>
       <MobileCategoriesGrid />
-      </div>      
-<div className="md:hidden block bg-white pb-4">
+      </div>  
+      <div className="md:hidden block bg-white pb-4">
       <ServiceBanner/>
 </div>
+    <section className="hidden md:block relative bg-gradient-to-br pb-4 from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800  md:py-16">
+      {/* Full-bleed mobile categories slider */}
+          
+
       {/* <MobileStickySearch /> */}
       <div className="container mx-auto ">
         <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <div className="space-y-4 hidden md:block">
+            <div className="space-y-4 ">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Find trusted
                 <span className="text-primary block">local services</span>
@@ -119,5 +122,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

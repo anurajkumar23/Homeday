@@ -21,7 +21,7 @@ export function PopularServices() {
     .slice(0, 8);
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-white to-[#204099]/5 dark:from-gray-900 dark:to-gray-800">
+    <section className=" md:py-20 bg-gradient-to-b from-white to-[#204099]/5 dark:from-gray-900 dark:to-gray-800">
       <div className="md:container md:mx-auto  md:px-6 max-w-7xl">
         {/* Header */}
         <div className="md:text-center mb-2 md:mb-16">
@@ -43,7 +43,7 @@ export function PopularServices() {
           {/* Mobile: Horizontal Scroll */}
           <div className="md:hidden overflow-x-auto scrollbar-hide">
             <div
-              className="flex gap-4  pb-4  pl-4 pr-4"
+              className="flex gap-4 pb-4 pl-4 after:content-[''] after:pr-2"
               style={{
                 scrollSnapType: 'x mandatory',
                 WebkitOverflowScrolling: 'touch'
@@ -54,6 +54,7 @@ export function PopularServices() {
               ))}
             </div>
           </div>
+
 
           {/* Desktop: Grid Layout */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -109,17 +110,16 @@ export function PopularServices() {
 function ServiceCard({ service, isMobile }: { service: any; isMobile: boolean }) {
   return (
     <Card
-      className={`group relative border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 rounded-2xl ${
-        isMobile 
-          ? 'flex-shrink-0 w-[280px]' 
+      className={`group relative border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 rounded-2xl ${isMobile
+          ? 'flex-shrink-0 w-[280px]'
           : 'w-full'
-      }`}
+        }`}
       style={{ scrollSnapAlign: isMobile ? 'start' : undefined }}
     >
       {/* Discount Badge */}
       {service.discount && (
         <div className="absolute top-3 left-3 z-10">
-          <Badge className="bg-red-500 text-white border-0 px-2 py-1 text-xs font-semibold rounded-lg shadow-sm">
+          <Badge className="bg-green-600 text-white border-0 px-2 py-1 text-xs font-semibold rounded-lg shadow-sm">
             {service.discount}
           </Badge>
         </div>
@@ -141,7 +141,7 @@ function ServiceCard({ service, isMobile }: { service: any; isMobile: boolean })
             sizes={isMobile ? "280px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
-          
+
           {/* Category Badge - Always visible */}
           <div className="absolute bottom-3 left-3">
             <Badge className="border border-[#204099] text-[#204099] bg-white/90 backdrop-blur-sm text-xs font-medium">
