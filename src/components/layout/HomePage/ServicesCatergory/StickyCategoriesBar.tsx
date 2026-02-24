@@ -48,27 +48,24 @@ export default function StickyCategoriesBar() {
   return (
     <div
       aria-hidden={!visible}
-      className={`fixed left-0 right-0 z-30 transition-all ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
-      } ${atTop ? "top-17 md:top-16 " : "md:top-16 top-17"}`}
+      className={`fixed left-0 right-0 z-30 transition-all ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
+        } top-[72px] md:top-[76px]`}
     >
-      <div className="container ">
-        <div className="bg-white/90 dark:bg-gray-900/80 backdrop-blur border rounded-xl shadow-sm">
-          <div className="flex items-center gap-2 overflow-x-auto  no-scrollbar p-2">
-            {servicesData.categories.map((cat) => {
-              const Icon = iconByCategory[cat.name] ?? Sparkles;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleClick(cat.id)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-200 hover:bg-[#204099]/5 transition-colors shrink-0"
-                >
-                  <Icon className="h-4 w-4 text-[#204099]" />
-                  <span className="whitespace-nowrap">{cat.name}</span>
-                </button>
-              );
-            })}
-          </div>
+      <div className="w-full bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 shadow-sm">
+        <div className="flex items-center gap-4 overflow-x-auto no-scrollbar px-4 py-2 sm:px-6">
+          {servicesData.categories.map((cat) => {
+            const Icon = iconByCategory[cat.name] ?? Sparkles;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => handleClick(cat.id)}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shrink-0"
+              >
+                <Icon className="h-4 w-4 text-[#204099]" />
+                <span className="whitespace-nowrap">{cat.name}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

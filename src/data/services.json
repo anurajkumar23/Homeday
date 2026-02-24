@@ -5,8 +5,8 @@
       "title": "Women's Salon & Spa at Home",
       "subtitle": "Professional beauty services at your doorstep",
       "description": "Hair care, facial, spa treatments by certified beauticians. Starting from ₹299",
-      "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&h=400&fit=crop&auto=format",
-      "mobileImage": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoryId": 1,
       "buttonText": "Book Now",
       "offer": "Flat 25% OFF",
@@ -21,8 +21,8 @@
       "title": "Professional Home Cleaning",
       "subtitle": "Deep cleaning services for your home",
       "description": "Bathroom, kitchen, and full home cleaning by verified professionals. Starting from ₹429",
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=400&fit=crop&auto=format",
-      "mobileImage": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoryId": 2,
       "buttonText": "Book Cleaning",
       "offer": "₹519 onwards",
@@ -37,8 +37,8 @@
       "title": "AC Service & Repair",
       "subtitle": "Beat the heat with professional AC maintenance",
       "description": "Complete AC servicing, gas refilling, and repair by certified technicians. Same day service available.",
-      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
-      "mobileImage": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoryId": 4,
       "buttonText": "Service Now",
       "offer": "Starting ₹199",
@@ -53,8 +53,8 @@
       "title": "Home Care Services",
       "subtitle": "Trusted caregivers and support staff",
       "description": "Professional nurses, drivers, cooks and caregivers for your family. Verified background checks.",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop&auto=format",
-      "mobileImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "mobileImage": "https://images.pexels.com/photos/5202925/pexels-photo-5202925.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoryId": 8,
       "buttonText": "Find Caregivers",
       "offer": "Verified Staff",
@@ -69,8 +69,8 @@
       "title": "Men's Salon & Massage",
       "subtitle": "Grooming services for modern men",
       "description": "Haircut, beard styling, massage, facial and more at home. Professional male grooming experts.",
-      "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=400&fit=crop&auto=format",
-      "mobileImage": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "mobileImage": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoryId": 7,
       "buttonText": "Book Service",
       "offer": "20% OFF",
@@ -86,14 +86,14 @@
       "id": 1,
       "name": "Women's Salon & Spa",
       "description": "Professional beauty and wellness services at home",
-      "image": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 101,
           "name": "Waxing",
-          "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -103,7 +103,7 @@
               "originalPrice": "₹1,599",
               "rating": 4.79,
               "reviews": 85000,
-              "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "25% OFF"
@@ -113,7 +113,7 @@
         {
           "id": 102,
           "name": "Cleanup",
-          "image": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -123,7 +123,7 @@
               "originalPrice": "₹949",
               "rating": 4.84,
               "reviews": 145000,
-              "image": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "5% OFF"
@@ -133,7 +133,7 @@
         {
           "id": 103,
           "name": "Hair Care",
-          "image": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3993467/pexels-photo-3993467.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -143,7 +143,7 @@
               "originalPrice": "₹599",
               "rating": 4.72,
               "reviews": 78000,
-              "image": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3993467/pexels-photo-3993467.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "33% OFF"
@@ -156,14 +156,14 @@
       "id": 2,
       "name": "Cleaning & Pest Control",
       "description": "Professional home cleaning services",
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 201,
           "name": "Bathroom & Kitchen Cleaning",
-          "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -173,7 +173,7 @@
               "originalPrice": null,
               "rating": 4.79,
               "reviews": 290000,
-              "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             },
@@ -184,7 +184,7 @@
               "originalPrice": "₹1,038",
               "rating": 4.79,
               "reviews": 290000,
-              "image": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "8% OFF"
@@ -196,7 +196,7 @@
               "originalPrice": "₹799",
               "rating": 4.75,
               "reviews": 125000,
-              "image": "https://images.unsplash.com/photo-1556909114-4f6e45f9844e?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "19% OFF"
@@ -208,7 +208,7 @@
               "originalPrice": null,
               "rating": 4.82,
               "reviews": 150000,
-              "image": "https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -217,7 +217,7 @@
         {
           "id": 202,
           "name": "Full Home Cleaning",
-          "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -227,7 +227,7 @@
               "originalPrice": "₹1,699",
               "rating": 4.77,
               "reviews": 87000,
-              "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "24% OFF"
@@ -237,7 +237,7 @@
         {
           "id": 203,
           "name": "Sofa & Carpet Cleaning",
-          "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/5531542/pexels-photo-5531542.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": false,
           "products": [
             {
@@ -247,7 +247,7 @@
               "originalPrice": "₹1,299",
               "rating": 4.67,
               "reviews": 45000,
-              "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5531542/pexels-photo-5531542.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": false,
               "popularSearch": true,
               "discount": "23% OFF"
@@ -260,14 +260,14 @@
       "id": 3,
       "name": "Electrician, Plumber & Carpenter",
       "description": "Trusted home repair and maintenance services",
-      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 301,
           "name": "Electrician",
-          "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -277,7 +277,7 @@
               "originalPrice": null,
               "rating": 4.85,
               "reviews": 70000,
-              "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             },
@@ -288,7 +288,7 @@
               "originalPrice": null,
               "rating": 4.82,
               "reviews": 98000,
-              "image": "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/1476178/pexels-photo-1476178.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -297,7 +297,7 @@
         {
           "id": 302,
           "name": "Plumber",
-          "image": "https://images.pexels.com/photos/8092340/pexels-photo-8092340.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -307,7 +307,7 @@
               "originalPrice": null,
               "rating": 4.84,
               "reviews": 42000,
-              "image": "https://images.pexels.com/photos/8092340/pexels-photo-8092340.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             },
@@ -318,7 +318,7 @@
               "originalPrice": null,
               "rating": 4.81,
               "reviews": 23000,
-              "image": "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": false,
               "popularSearch": false
             }
@@ -327,7 +327,7 @@
         {
           "id": 303,
           "name": "Carpenter",
-          "image": "https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -337,7 +337,7 @@
               "originalPrice": null,
               "rating": 4.86,
               "reviews": 101000,
-              "image": "https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -349,14 +349,14 @@
       "id": 4,
       "name": "AC & Appliance Repair",
       "description": "Professional appliance repair and maintenance",
-      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
       "bannerImage": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 401,
           "name": "AC Service and Repair",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -366,7 +366,7 @@
               "originalPrice": "₹499",
               "rating": 4.78,
               "reviews": 456000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "40% OFF"
@@ -376,7 +376,7 @@
         {
           "id": 402,
           "name": "Washing Machine Repair",
-          "image": "https://images.pexels.com/photos/5835359/pexels-photo-5835359.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -386,7 +386,7 @@
               "originalPrice": null,
               "rating": 4.79,
               "reviews": 322000,
-              "image": "https://images.pexels.com/photos/5835359/pexels-photo-5835359.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -395,7 +395,7 @@
         {
           "id": 403,
           "name": "Water Purifier Repair",
-          "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -405,7 +405,7 @@
               "originalPrice": null,
               "rating": 4.79,
               "reviews": 146000,
-              "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -414,7 +414,7 @@
         {
           "id": 404,
           "name": "Chimney Cleaning",
-          "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -424,7 +424,7 @@
               "originalPrice": null,
               "rating": 4.84,
               "reviews": 135000,
-              "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -436,14 +436,14 @@
       "id": 5,
       "name": "Spa for Women",
       "description": "Relaxing spa and wellness treatments",
-      "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 501,
           "name": "Stress Relief",
-          "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -453,7 +453,7 @@
               "originalPrice": "₹1,699",
               "rating": 4.82,
               "reviews": 45000,
-              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "24% OFF"
@@ -463,7 +463,7 @@
         {
           "id": 502,
           "name": "Pain Relief",
-          "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -473,7 +473,7 @@
               "originalPrice": "₹1,799",
               "rating": 4.79,
               "reviews": 38000,
-              "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "22% OFF"
@@ -486,14 +486,14 @@
       "id": 6,
       "name": "Salon for Men",
       "description": "Professional grooming services for men",
-      "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691651/pexels-photo-5691651.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 601,
           "name": "Haircut & Beard Styling",
-          "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -503,7 +503,7 @@
               "originalPrice": "₹699",
               "rating": 4.74,
               "reviews": 89000,
-              "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "29% OFF"
@@ -516,14 +516,14 @@
       "id": 7,
       "name": "Massage for Men",
       "description": "Professional massage and wellness services",
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 701,
           "name": "Pain Relief",
-          "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -533,7 +533,7 @@
               "originalPrice": "₹1,599",
               "rating": 4.78,
               "reviews": 56000,
-              "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "25% OFF"
@@ -546,14 +546,14 @@
       "id": 8,
       "name": "Home Care Services",
       "description": "Trusted caregivers, drivers, nurses and support staff",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 801,
           "name": "Driver",
-          "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -563,7 +563,7 @@
               "originalPrice": "₹1,000/day",
               "rating": 4.7,
               "reviews": 12000,
-              "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "20% OFF"
@@ -575,7 +575,7 @@
               "originalPrice": "₹18,000/month",
               "rating": 4.8,
               "reviews": 8500,
-              "image": "https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "17% OFF"
@@ -585,7 +585,7 @@
         {
           "id": 802,
           "name": "Nurse",
-          "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -595,7 +595,7 @@
               "originalPrice": "₹1,500/day",
               "rating": 4.9,
               "reviews": 15000,
-              "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "20% OFF"
@@ -607,7 +607,7 @@
               "originalPrice": "₹2,200/day",
               "rating": 4.8,
               "reviews": 12000,
-              "image": "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "18% OFF"
@@ -619,7 +619,7 @@
               "originalPrice": "₹3,000/day",
               "rating": 4.9,
               "reviews": 9500,
-              "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": false,
               "popularSearch": true,
               "discount": "17% OFF"
@@ -629,7 +629,7 @@
         {
           "id": 803,
           "name": "Cook",
-          "image": "https://images.unsplash.com/photo-1556909114-4be2c52df5ad?w=200&h=150&fit=crop&auto=format",
+          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -639,7 +639,7 @@
               "originalPrice": "₹10,000/month",
               "rating": 4.6,
               "reviews": 18000,
-              "image": "https://images.unsplash.com/photo-1556909114-4be2c52df5ad?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "20% OFF"
@@ -651,7 +651,7 @@
               "originalPrice": "₹15,000/month",
               "rating": 4.7,
               "reviews": 14000,
-              "image": "https://images.pexels.com/photos/4252137/pexels-photo-4252137.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "20% OFF"
@@ -663,7 +663,7 @@
               "originalPrice": "₹3,200/event",
               "rating": 4.8,
               "reviews": 6500,
-              "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&h=200&fit=crop&auto=format",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": false,
               "popularSearch": false,
               "discount": "22% OFF"
@@ -676,14 +676,14 @@
       "id": 9,
       "name": "Native Water Purifier",
       "description": "Premium water purification solutions",
-      "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
       "bannerImage": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 901,
           "name": "Water Purifier Installation",
-          "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -693,7 +693,7 @@
               "originalPrice": "₹18,999",
               "rating": 4.82,
               "reviews": 12000,
-              "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "21% OFF"
@@ -706,14 +706,14 @@
       "id": 10,
       "name": "Native Smart Locks",
       "description": "Advanced home security solutions",
-      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop&auto=format",
-      "bannerImage": "https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=300&fit=crop&auto=format",
+      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 1001,
           "name": "Smart Lock Installation",
-          "image": "https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&fit=crop",
+          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -723,7 +723,7 @@
               "originalPrice": "₹12,999",
               "rating": 4.75,
               "reviews": 8500,
-              "image": "https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
+              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "23% OFF"

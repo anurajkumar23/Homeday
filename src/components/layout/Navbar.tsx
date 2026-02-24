@@ -17,6 +17,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import SearchBar from "./Searchbar";
+import { ThemeToggle } from "../ThemeToggle";
 
 const BRAND_COLOR = "#204099";
 const SCROLL_THRESHOLD = 40; // px before the bar shrinks
@@ -25,8 +26,8 @@ const SCROLL_THRESHOLD = 40; // px before the bar shrinks
 function DesktopLinks() {
   const items = [
     { href: "/bookings", icon: <CalendarCheck className="mr-1 h-5 w-5" />, label: "Bookings" },
-    { href: "/cart",     icon: <ShoppingCart className="mr-1 h-5 w-5" />, label: "Cart" },
-    { href: "/profile",  icon: <User className="mr-1 h-5 w-5" />,          label: "Profile" },
+    { href: "/cart", icon: <ShoppingCart className="mr-1 h-5 w-5" />, label: "Cart" },
+    { href: "/profile", icon: <User className="mr-1 h-5 w-5" />, label: "Profile" },
   ];
 
   return (
@@ -44,12 +45,15 @@ function DesktopLinks() {
 
       <Link
         href="/contact"
-        className="flex items-center gap-1 rounded-lg bg-[--brand] px-3 py-2 text-sm font-medium text-white shadow-md hover:shadow-lg transition-shadow"
-        style={{ "--brand": BRAND_COLOR } as React.CSSProperties}
+        className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#3252ad] hover:to-[#224194] px-3 py-2 text-sm font-medium text-white shadow-md hover:shadow-lg transition-all"
       >
         <Phone className="h-4 w-4" />
         Contact
       </Link>
+
+      <div className="ml-2 text-gray-700 dark:text-gray-300">
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
@@ -59,14 +63,14 @@ function TrustIndicators({ hidden }: { hidden: boolean }) {
   if (hidden) return null;
 
   const icons = [
-    { icon: <Clock  className="h-3 w-3 text-blue-600"   />, label: "90-min arrival" },
-    { icon: <Shield className="h-3 w-3 text-green-600"  />, label: "Verified pros"   },
-    { icon: <Star   className="h-3 w-3 text-yellow-600" />, label: "4.8/5 rating"   },
+    { icon: <Clock className="h-3 w-3 text-blue-600" />, label: "90-min arrival" },
+    { icon: <Shield className="h-3 w-3 text-green-600" />, label: "Verified pros" },
+    { icon: <Star className="h-3 w-3 text-yellow-600" />, label: "4.8/5 rating" },
   ];
 
   return (
-    <div className="hidden md:block border-b bg-gradient-to-r from-gray-50 to-blue-50/30">
-      <div className="container mx-auto flex justify-center gap-8 px-4 py-3 text-sm text-gray-600">
+    <div className="hidden md:block border-b bg-gradient-to-r from-gray-50 from-10% to-[#204099]/5 to-90%">
+      <div className="container mx-auto flex justify-center gap-8 px-4 py-3 text-sm text-gray-700">
         {icons.map(({ icon, label }) => (
           <span key={label} className="flex items-center gap-2 font-medium">
             {icon}
@@ -128,7 +132,7 @@ export default function Navbar() {
     <>
       {/* ─── Announcement (mobile only before shrink) ─── */}
       {!shrink && (
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-700 via-purple-700 to-blue-800 py-2.5 px-4 text-center text-sm text-white">
+        <div className="relative overflow-hidden bg-gradient-to-r from-[#204099] via-[#1a3a90] to-[#173172] py-2.5 px-4 text-center text-sm text-white">
           <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           <div className="relative z-10 flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4 animate-pulse" />
@@ -147,7 +151,7 @@ export default function Navbar() {
           {/* Logo (always desktop, hides on mobile shrink) */}
           <Link
             href="/"
-            className="group flex items-center gap-2 md:flex"
+            className="group flex items-center gap-3 md:flex"
             style={{ color: BRAND_COLOR }}
           >
             <Image
@@ -158,7 +162,7 @@ export default function Navbar() {
               className="rounded-xl shadow-lg"
               priority
             />
-            <span className=" text-xl font-bold transition-transform group-hover:scale-105 md:inline">
+            <span className="text-2xl font-black tracking-tight transition-transform group-hover:scale-105 md:inline">
               Homeday
             </span>
           </Link>
@@ -174,9 +178,8 @@ export default function Navbar() {
 
         {/* Mobile: brand + location rows (collapse with animation) */}
         <div
-          className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
-            shrink ? "max-h-0 opacity-0" : "max-h-[148px] opacity-100"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${shrink ? "max-h-0 opacity-0" : "max-h-[260px] opacity-100"
+            }`}
         >
           {/* Logo row */}
           <div className="flex items-center gap-2 px-4 py-3">
@@ -194,21 +197,18 @@ export default function Navbar() {
           </div>
 
           {/* Location */}
-          <div className="border-b border-gray-100 px-4">
+          <div className="border-b border-gray-100 dark:border-gray-800 px-4 flex justify-between items-center bg-white dark:bg-gray-950">
             <MobileLocation
               expanded={locOpen}
               toggle={() => setLocOpen(!locOpen)}
             />
+            <div className="text-gray-700 dark:text-gray-300">
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
 
-        {/* Mobile sticky search (always present, sticks automatically) */}
-        <div className="sticky top-0 z-50 border-t bg-white/95 backdrop-blur-md md:hidden">
-          {/* Small upward slide when rows collapse */}
-          <div
-            className="px-4 transition-transform duration-300 translate-y-0 py-3"
-          
-          >
+          {/* Mobile Search */}
+          <div className="px-4 py-3 bg-white dark:bg-gray-950">
             <SearchBar />
           </div>
         </div>

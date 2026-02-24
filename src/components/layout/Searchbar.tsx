@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { Search, X, MapPin, ChevronDown } from "lucide-react";
 
 const SearchBar = () => {
@@ -8,6 +9,7 @@ const SearchBar = () => {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
+  const router = useRouter();
 
   const locationRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -31,12 +33,12 @@ const SearchBar = () => {
     setIsSearching(true);
     const query = searchQuery.trim();
     const area = selectedLocation;
-    // Simulate async search
+
     setTimeout(() => {
       setIsSearching(false);
       if (!query) return;
-      alert(`Searching "${query}" in ${area}`);
-    }, 600);
+      router.push(`/services?q=${encodeURIComponent(query)}&loc=${encodeURIComponent(area)}`);
+    }, 300); // Small delay for UX feel
   };
 
   // Debounce user typing to simulate suggestions fetch
@@ -107,7 +109,7 @@ const SearchBar = () => {
       onSubmit={handleSearch}
       role="search"
       aria-label="Site search"
-      className="flex w-full max-w-3xl mx-auto bg-white border rounded-xl shadow-sm overflow-hidden md:flex-row flex-col md:items-stretch"
+      className="flex w-full max-w-3xl mx-auto bg-white border border-gray-200/60 rounded-full shadow-sm hover:shadow-md focus-within:ring-2 focus-within:ring-[#204099]/20 focus-within:border-[#204099]/40 overflow-hidden md:flex-row flex-col md:items-stretch transition-all duration-300"
     >
       {/* Left Side - Location Selector */}
       <div
@@ -127,9 +129,8 @@ const SearchBar = () => {
           <MapPin className="h-4 w-4 text-gray-400 mr-2" />
           <span className="truncate font-medium">{selectedLocation}</span>
           <ChevronDown
-            className={`h-4 w-4 ml-auto transition-transform ${
-              isLocationOpen ? "rotate-180" : ""
-            }`}
+            className={`h-4 w-4 ml-auto transition-transform ${isLocationOpen ? "rotate-180" : ""
+              }`}
           />
         </button>
 
@@ -146,13 +147,11 @@ const SearchBar = () => {
                 role="option"
                 aria-selected={selectedLocation === location.name}
                 onClick={() => handleLocationSelect(location)}
-                className={`w-full flex items-center px-4 py-3 text-left transition-colors ${
-                  highlightedIndex === index ? "bg-blue-50" : "hover:bg-blue-50"
-                } ${
-                  selectedLocation === location.name
+                className={`w-full flex items-center px-4 py-3 text-left transition-colors ${highlightedIndex === index ? "bg-blue-50" : "hover:bg-blue-50"
+                  } ${selectedLocation === location.name
                     ? "border-l-2 border-blue-500"
                     : ""
-                }`}
+                  }`}
               >
                 <MapPin className="h-4 w-4 text-gray-400 mr-2" />
                 <div>
@@ -168,9 +167,8 @@ const SearchBar = () => {
       {/* Right Side - Search Input */}
       <div className="relative flex items-center px-4 md:flex-1">
         <Search
-          className={`absolute left-4 h-5 w-5 ${
-            isSearching ? "text-blue-500 animate-spin" : "text-gray-400"
-          }`}
+          className={`absolute left-4 h-5 w-5 ${isSearching ? "text-blue-500 animate-spin" : "text-gray-400"
+            }`}
           aria-hidden="true"
         />
 

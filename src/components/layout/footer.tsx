@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-white text-gray-700 border-t">
+    <footer className="bg-white dark:bg-gray-950 text-gray-700 dark:text-gray-300 border-t dark:border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -16,7 +16,7 @@ export function Footer() {
               </div>
               <h3 className="text-2xl font-serif font-black text-[#204099]">Homeday</h3>
             </div>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               Your trusted partner for professional home services. Connecting you with verified experts for all your
               home needs.
             </p>
@@ -39,7 +39,7 @@ export function Footer() {
           {/* Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-[#204099]">Services</h4>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
                 <a href="#" className="hover:text-[#204099] transition-colors">
                   Cleaning Services
@@ -76,7 +76,7 @@ export function Footer() {
           {/* Company */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-[#204099]">Company</h4>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
                 <a href="#" className="hover:text-[#204099] transition-colors">
                   About Us
@@ -113,7 +113,7 @@ export function Footer() {
           {/* Contact & Newsletter */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-[#204099]">Stay Connected</h4>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-700 dark:text-gray-400">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span>1-800-HOMEDAY</span>
@@ -129,11 +129,11 @@ export function Footer() {
             </div>
 
             <div className="space-y-2">
-              <p className="text-sm text-gray-600">Subscribe to our newsletter</p>
+              <p className="text-sm text-gray-600 dark:text-gray-500">Subscribe to our newsletter</p>
               <div className="flex space-x-2">
                 <Input
                   placeholder="Your email"
-                  className="bg-white text-gray-900 placeholder:text-gray-500 border-gray-300"
+                  className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-500 border-gray-300 dark:border-gray-700"
                 />
                 <Button size="sm" className="bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#183a8a] hover:to-[#122a64] text-white">
                   Subscribe
@@ -143,10 +143,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-12 pt-8">
+        <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-500 text-sm">© 2025 Homeday. All rights reserved.</p>
-            <div className="flex space-x-6 text-sm text-gray-500">
+            <p className="text-gray-500 dark:text-gray-500 text-sm">© 2025 Homeday. All rights reserved.</p>
+            <div className="flex space-x-6 text-sm text-gray-500 dark:text-gray-500">
               <a href="#" className="hover:text-[#204099] transition-colors">
                 Privacy Policy
               </a>
