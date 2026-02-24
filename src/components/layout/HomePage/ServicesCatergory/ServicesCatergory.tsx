@@ -109,10 +109,10 @@ export default function ServiceCategories() {
                         unoptimized
                       />
                       {/* Discount badge */}
-                      {p.discount && (
+                      {(p as any).discount && (
                         <div className="absolute top-2 left-2">
                           <Badge className="bg-green-500 hover:bg-green-500 text-white border-0 text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
-                            {p.discount}
+                            {(p as any).discount}
                           </Badge>
                         </div>
                       )}
