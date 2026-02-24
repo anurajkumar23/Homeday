@@ -133,7 +133,7 @@
         {
           "id": 103,
           "name": "Hair Care",
-          "image": "https://images.pexels.com/photos/3993467/pexels-photo-3993467.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "image": "https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -143,7 +143,7 @@
               "originalPrice": "₹599",
               "rating": 4.72,
               "reviews": 78000,
-              "image": "https://images.pexels.com/photos/3993467/pexels-photo-3993467.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "discount": "33% OFF"
@@ -277,7 +277,7 @@
               "originalPrice": null,
               "rating": 4.85,
               "reviews": 70000,
-              "image": "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             },
@@ -288,7 +288,7 @@
               "originalPrice": null,
               "rating": 4.82,
               "reviews": 98000,
-              "image": "https://images.pexels.com/photos/1476178/pexels-photo-1476178.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }
@@ -307,7 +307,7 @@
               "originalPrice": null,
               "rating": 4.84,
               "reviews": 42000,
-              "image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/6444968/pexels-photo-6444968.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             },
@@ -337,7 +337,7 @@
               "originalPrice": null,
               "rating": 4.86,
               "reviews": 101000,
-              "image": "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/5974388/pexels-photo-5974388.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true
             }

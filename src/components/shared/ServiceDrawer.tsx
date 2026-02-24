@@ -52,7 +52,7 @@ export function ServiceDrawer({ children, product, categoryName }: ServiceDrawer
         "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=400",
     ] : isRepair ? [
         "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=400",
-        "https://images.pexels.com/photos/10369713/pexels-photo-10369713.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=400",
     ] : [
         "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=400",
         "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -92,6 +92,7 @@ export function ServiceDrawer({ children, product, categoryName }: ServiceDrawer
                                     alt={product.name}
                                     fill
                                     className="object-cover"
+                                    unoptimized
                                 />
                             </div>
 
@@ -133,7 +134,7 @@ export function ServiceDrawer({ children, product, categoryName }: ServiceDrawer
                                 <div className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-1">
                                     {workImages.map((img, idx) => (
                                         <div key={idx} className="relative w-36 h-24 flex-shrink-0 snap-start bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
-                                            <Image src={img} alt="Our Work" fill className="object-cover" sizes="144px" />
+                                            <Image src={img} alt="Our Work" fill className="object-cover" sizes="144px" unoptimized />
                                         </div>
                                     ))}
                                 </div>
