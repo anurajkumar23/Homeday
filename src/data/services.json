@@ -113,7 +113,7 @@
         {
           "id": 102,
           "name": "Room & Bathroom",
-          "image": "https://images.pexels.com/photos/48889/pexels-photo-48889.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "image": "https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -123,7 +123,7 @@
               "originalPrice": null,
               "rating": 4.90,
               "reviews": 25000,
-              "image": "https://images.pexels.com/photos/48889/pexels-photo-48889.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "duration": "20–30 mins",
@@ -387,7 +387,7 @@
         {
           "id": 301,
           "name": "Instant Maid",
-          "image": "https://images.pexels.com/photos/48889/pexels-photo-48889.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "image": "https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
@@ -397,7 +397,7 @@
               "originalPrice": null,
               "rating": 4.85,
               "reviews": 15000,
-              "image": "https://images.pexels.com/photos/48889/pexels-photo-48889.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "image": "https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
               "duration": "Per hour",
