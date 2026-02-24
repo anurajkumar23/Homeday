@@ -46,7 +46,7 @@ export default function ServiceCategories() {
       {/* Category Header */}
       <div className="flex items-center gap-5">
         <div className="relative h-20 w-20 overflow-hidden rounded-2xl shadow-md flex-shrink-0">
-          <Image src={category.image} alt={category.name} fill className="object-cover" />
+          <Image src={category.image} alt={category.name} fill className="object-cover" unoptimized />
         </div>
         <div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{category.name}</h3>
@@ -79,7 +79,7 @@ export default function ServiceCategories() {
               >
                 <div className={`relative h-14 w-14 overflow-hidden rounded-full mb-2 transition-transform duration-300
                   ${isSelected ? 'scale-110 shadow-md' : 'group-hover:scale-105'}`}>
-                  <Image src={sub.image} alt={sub.name} fill className="object-cover" />
+                  <Image src={sub.image} alt={sub.name} fill className="object-cover" unoptimized />
                 </div>
                 <span className={`text-xs font-semibold text-center leading-tight transition-colors
                   ${isSelected ? 'text-primary dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}>
@@ -102,10 +102,11 @@ export default function ServiceCategories() {
                     {/* Product Image */}
                     <div className="relative w-28 h-28 flex-shrink-0 overflow-hidden">
                       <Image
-                        src={currentSub.image || category.image}
+                        src={p.image || currentSub.image || category.image}
                         alt={p.name}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        unoptimized
                       />
                       {/* Discount badge */}
                       {p.discount && (
@@ -212,7 +213,7 @@ export default function ServiceCategories() {
                       }`}
                   >
                     <div className={`relative h-12 w-12 overflow-hidden rounded-xl flex-shrink-0 transition-transform duration-200 ${isActive ? 'scale-105' : 'group-hover:scale-105'}`}>
-                      <Image src={c.image} alt={c.name} fill className="object-cover" />
+                      <Image src={c.image} alt={c.name} fill className="object-cover" unoptimized />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className={`font-semibold text-sm truncate transition-colors ${isActive ? 'text-primary dark:text-blue-400' : 'text-gray-800 dark:text-gray-200'}`}>{c.name}</h4>
