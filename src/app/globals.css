@@ -150,3 +150,8 @@
   }
 }
 
+/* Base UI Drawer — force pointer-events on all internal wrappers */
+[data-base-ui-popup] *,
+[role="dialog"] {
+  pointer-events: auto !important;
+}

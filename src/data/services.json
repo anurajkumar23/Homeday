@@ -2,151 +2,211 @@
   "banners": [
     {
       "id": 1,
-      "title": "Women's Salon & Spa at Home",
-      "subtitle": "Professional beauty services at your doorstep",
-      "description": "Hair care, facial, spa treatments by certified beauticians. Starting from ₹299",
-      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "mobileImage": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "categoryId": 1,
-      "buttonText": "Book Now",
-      "offer": "Flat 25% OFF",
-      "validTill": "2025-09-30",
-      "priority": 1,
-      "active": true,
-      "backgroundColor": "#FCE4EC",
-      "textColor": "#C2185B"
-    },
-    {
-      "id": 2,
       "title": "Professional Home Cleaning",
       "subtitle": "Deep cleaning services for your home",
-      "description": "Bathroom, kitchen, and full home cleaning by verified professionals. Starting from ₹429",
+      "description": "Bathroom, kitchen, and full home cleaning by verified professionals. Starting from ₹49",
       "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "mobileImage": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "categoryId": 2,
+      "categoryId": 1,
       "buttonText": "Book Cleaning",
-      "offer": "₹519 onwards",
-      "validTill": "2025-10-31",
-      "priority": 2,
+      "offer": "Starting ₹49",
+      "validTill": "2026-12-31",
+      "priority": 1,
       "active": true,
       "backgroundColor": "#E8F5E8",
       "textColor": "#388E3C"
     },
     {
-      "id": 3,
-      "title": "AC Service & Repair",
-      "subtitle": "Beat the heat with professional AC maintenance",
-      "description": "Complete AC servicing, gas refilling, and repair by certified technicians. Same day service available.",
-      "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "mobileImage": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "categoryId": 4,
-      "buttonText": "Service Now",
-      "offer": "Starting ₹199",
-      "validTill": "2025-09-15",
-      "priority": 3,
-      "active": true,
-      "backgroundColor": "#E3F2FD",
-      "textColor": "#1565C0"
-    },
-    {
-      "id": 4,
-      "title": "Home Care Services",
-      "subtitle": "Trusted caregivers and support staff",
-      "description": "Professional nurses, drivers, cooks and caregivers for your family. Verified background checks.",
-      "image": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "mobileImage": "https://images.pexels.com/photos/5202925/pexels-photo-5202925.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "categoryId": 8,
-      "buttonText": "Find Caregivers",
-      "offer": "Verified Staff",
-      "validTill": "2025-12-31",
-      "priority": 4,
+      "id": 2,
+      "title": "Kitchen & Home Help",
+      "subtitle": "Chimney, fridge, washing machine & more",
+      "description": "Gas choolha cleaning, fridge cleaning, chimney servicing, utensil washing and more.",
+      "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "categoryId": 2,
+      "buttonText": "Book Now",
+      "offer": "From ₹49",
+      "validTill": "2026-12-31",
+      "priority": 2,
       "active": true,
       "backgroundColor": "#FFF3E0",
       "textColor": "#F57C00"
     },
     {
-      "id": 5,
-      "title": "Men's Salon & Massage",
-      "subtitle": "Grooming services for modern men",
-      "description": "Haircut, beard styling, massage, facial and more at home. Professional male grooming experts.",
-      "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "mobileImage": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "categoryId": 7,
-      "buttonText": "Book Service",
-      "offer": "20% OFF",
-      "validTill": "2025-08-31",
-      "priority": 5,
+      "id": 3,
+      "title": "Maid & Cooking Services",
+      "subtitle": "Instant Maid & Home Cooking",
+      "description": "Instant maid service ₹99/hr. Cooking from ₹199. Roti, sabzi, dal, rice as per your needs.",
+      "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "categoryId": 3,
+      "buttonText": "Book Maid",
+      "offer": "₹99/hour",
+      "validTill": "2026-12-31",
+      "priority": 3,
       "active": true,
-      "backgroundColor": "#F3E5F5",
-      "textColor": "#7B1FA2"
+      "backgroundColor": "#FCE4EC",
+      "textColor": "#C2185B"
+    },
+    {
+      "id": 4,
+      "title": "Instant Technical Services",
+      "subtitle": "Electrician, Laundry & Quick Repairs",
+      "description": "Instant electrician ₹59 visiting charge. Minor repairs, switch fixing, fan repair.",
+      "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "mobileImage": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "categoryId": 4,
+      "buttonText": "Book Now",
+      "offer": "From ₹49",
+      "validTill": "2026-12-31",
+      "priority": 4,
+      "active": true,
+      "backgroundColor": "#E3F2FD",
+      "textColor": "#1565C0"
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Women's Salon & Spa",
-      "description": "Professional beauty and wellness services at home",
-      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      "name": "Cleaning Services",
+      "description": "Professional home cleaning at affordable prices",
+      "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 101,
-          "name": "Waxing",
-          "image": "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Kitchen Cleaning",
+          "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
               "id": 1,
-              "name": "Full Body Waxing",
-              "price": "₹1,199",
-              "originalPrice": "₹1,599",
-              "rating": 4.79,
-              "reviews": 85000,
-              "image": "https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "name": "Kitchen Cleaning",
+              "price": "₹149",
+              "originalPrice": null,
+              "rating": 4.85,
+              "reviews": 12000,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
-              "discount": "25% OFF"
+              "duration": "30–45 mins",
+              "slot": "8 AM – 8 PM",
+              "includes": ["Platform wiping", "Sink cleaning", "Tiles wiping", "Gas stove surface cleaning", "Basic dust removal"]
+            },
+            {
+              "id": 2,
+              "name": "Full Kitchen Cleaning",
+              "price": "₹399",
+              "originalPrice": null,
+              "rating": 4.82,
+              "reviews": 8500,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "60–90 mins",
+              "slot": "8 AM – 8 PM",
+              "includes": ["Deep platform scrubbing", "Tiles & grease removal", "Gas burner cleaning", "Sink descaling", "Exterior cabinet wiping"]
             }
           ]
         },
         {
           "id": 102,
-          "name": "Cleanup",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Room & Bathroom",
+          "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 2,
-              "name": "Sara Lightening Glow Facial",
-              "price": "₹899",
-              "originalPrice": "₹949",
-              "rating": 4.84,
-              "reviews": 145000,
-              "image": "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "id": 3,
+              "name": "Room Cleaning",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.90,
+              "reviews": 25000,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
-              "discount": "5% OFF"
+              "duration": "20–30 mins",
+              "slot": "7 AM – 9 PM",
+              "includes": ["Sweeping (Jhadu)", "Mopping (Pochha)", "Basic dusting"]
+            },
+            {
+              "id": 4,
+              "name": "Bathroom Cleaning",
+              "price": "₹199",
+              "originalPrice": null,
+              "rating": 4.79,
+              "reviews": 18000,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "45–60 mins",
+              "slot": "8 AM – 8 PM",
+              "includes": ["Floor & wall scrubbing", "WC cleaning", "Washbasin cleaning", "Tap & fittings cleaning"]
+            },
+            {
+              "id": 5,
+              "name": "Deep Bathroom Cleaning (Machine)",
+              "price": "₹399",
+              "originalPrice": null,
+              "rating": 4.88,
+              "reviews": 9500,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "60–90 mins",
+              "slot": "8 AM – 7 PM",
+              "includes": ["Machine scrubbing", "Hard stain removal", "Tile joint cleaning", "Complete descaling", "Exhaust cleaning"]
             }
           ]
         },
         {
           "id": 103,
-          "name": "Hair Care",
-          "image": "https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Full House Cleaning",
+          "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 3,
-              "name": "Hair Cut & Blow Dry",
-              "price": "₹399",
-              "originalPrice": "₹599",
-              "rating": 4.72,
-              "reviews": 78000,
-              "image": "https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "id": 6,
+              "name": "Full House Cleaning",
+              "price": "₹499",
+              "originalPrice": null,
+              "rating": 4.80,
+              "reviews": 15000,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
-              "discount": "33% OFF"
+              "duration": "1.5–2 Hours",
+              "slot": "8 AM – 8 PM",
+              "includes": ["1 Bedroom", "1 Hall", "1 Kitchen", "1 Bathroom", "Sweeping + Mopping + Basic Dusting"]
+            },
+            {
+              "id": 7,
+              "name": "Deep House Cleaning",
+              "price": "₹1,299",
+              "originalPrice": null,
+              "rating": 4.85,
+              "reviews": 6200,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "3–5 Hours",
+              "slot": "8 AM – 6 PM",
+              "includes": ["Complete home deep cleaning", "Sofa & bed dust removal", "Fan cleaning", "Window & door cleaning", "Balcony cleaning", "Kitchen grease cleaning", "Bathroom deep scrubbing"]
+            },
+            {
+              "id": 8,
+              "name": "Regular Cleaning",
+              "price": "₹199",
+              "originalPrice": null,
+              "rating": 4.75,
+              "reviews": 20000,
+              "image": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "45–60 mins",
+              "slot": "Morning & Evening",
+              "includes": ["Daily sweeping", "Mopping", "Surface dusting"]
             }
           ]
         }
@@ -154,103 +214,163 @@
     },
     {
       "id": 2,
-      "name": "Cleaning & Pest Control",
-      "description": "Professional home cleaning services",
-      "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      "name": "Kitchen & Home Help",
+      "description": "Kitchen appliance cleaning and home organization",
+      "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 201,
-          "name": "Bathroom & Kitchen Cleaning",
+          "name": "Kitchen Appliance Cleaning",
           "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 4,
-              "name": "Intense Bathroom Cleaning",
-              "price": "₹519",
-              "originalPrice": null,
-              "rating": 4.79,
-              "reviews": 290000,
-              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true
-            },
-            {
-              "id": 5,
-              "name": "Intense Cleaning (2 Bathrooms)",
-              "price": "₹960",
-              "originalPrice": "₹1,038",
-              "rating": 4.79,
-              "reviews": 290000,
-              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "8% OFF"
-            },
-            {
-              "id": 6,
-              "name": "Kitchen Deep Cleaning",
-              "price": "₹649",
-              "originalPrice": "₹799",
-              "rating": 4.75,
-              "reviews": 125000,
-              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "19% OFF"
-            },
-            {
-              "id": 7,
-              "name": "Classic Bathroom Cleaning",
-              "price": "₹429",
+              "id": 9,
+              "name": "Gas Choolha Cleaning",
+              "price": "₹49",
               "originalPrice": null,
               "rating": 4.82,
-              "reviews": 150000,
+              "reviews": 8000,
               "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
-              "popularSearch": true
+              "popularSearch": true,
+              "duration": "20–30 mins",
+              "includes": ["Surface cleaning", "Burner cleaning"]
+            },
+            {
+              "id": 10,
+              "name": "Fridge Cleaning",
+              "price": "₹99",
+              "originalPrice": null,
+              "rating": 4.78,
+              "reviews": 5500,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "30–45 mins",
+              "includes": ["Interior wipe", "Tray cleaning"]
+            },
+            {
+              "id": 11,
+              "name": "Chimney Servicing",
+              "price": "₹599",
+              "originalPrice": null,
+              "rating": 4.84,
+              "reviews": 4200,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "60–90 mins",
+              "includes": ["Filter cleaning", "Grease removal"]
+            },
+            {
+              "id": 12,
+              "name": "Washing Machine Cleaning",
+              "price": "₹199",
+              "originalPrice": null,
+              "rating": 4.79,
+              "reviews": 6800,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "duration": "45–60 mins",
+              "includes": ["Drum cleaning", "Outer cleaning"]
             }
           ]
         },
         {
           "id": 202,
-          "name": "Full Home Cleaning",
-          "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Kitchen Help",
+          "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 8,
-              "name": "Complete House Cleaning",
-              "price": "₹1,299",
-              "originalPrice": "₹1,699",
-              "rating": 4.77,
-              "reviews": 87000,
-              "image": "https://images.pexels.com/photos/4270273/pexels-photo-4270273.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "id": 13,
+              "name": "Washing Utensils",
+              "price": "₹99",
+              "originalPrice": null,
+              "rating": 4.70,
+              "reviews": 7200,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
-              "popularSearch": true,
-              "discount": "24% OFF"
+              "popularSearch": false,
+              "duration": "45 mins",
+              "includes": ["Utensil washing (up to 1 session)"]
+            },
+            {
+              "id": 14,
+              "name": "Vegetables Chopping",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.72,
+              "reviews": 3400,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": false,
+              "popularSearch": false,
+              "duration": "30 mins",
+              "includes": ["Fresh cutting service"]
+            },
+            {
+              "id": 15,
+              "name": "Fruits Cutting",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.72,
+              "reviews": 2800,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": false,
+              "popularSearch": false,
+              "duration": "20–30 mins",
+              "includes": ["Clean & hygienic cutting"]
             }
           ]
         },
         {
           "id": 203,
-          "name": "Sofa & Carpet Cleaning",
-          "image": "https://images.pexels.com/photos/5531542/pexels-photo-5531542.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Home Organization",
+          "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": false,
           "products": [
             {
-              "id": 9,
-              "name": "Sofa Deep Cleaning",
-              "price": "₹999",
-              "originalPrice": "₹1,299",
-              "rating": 4.67,
-              "reviews": 45000,
-              "image": "https://images.pexels.com/photos/5531542/pexels-photo-5531542.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "id": 16,
+              "name": "Cupboard Arrangement",
+              "price": "₹149",
+              "originalPrice": null,
+              "rating": 4.68,
+              "reviews": 2100,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": false,
-              "popularSearch": true,
-              "discount": "23% OFF"
+              "popularSearch": false,
+              "duration": "45–60 mins",
+              "includes": ["Clothes folding & organizing"]
+            },
+            {
+              "id": 17,
+              "name": "Curtains Arrangement",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.65,
+              "reviews": 1500,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": false,
+              "popularSearch": false,
+              "duration": "20–30 mins",
+              "includes": ["Hanging & setting"]
+            },
+            {
+              "id": 18,
+              "name": "Bed Arrangement",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.60,
+              "reviews": 1800,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": false,
+              "popularSearch": false,
+              "duration": "15–20 mins",
+              "includes": ["Sheet setting & organizing"]
             }
           ]
         }
@@ -258,88 +378,78 @@
     },
     {
       "id": 3,
-      "name": "Electrician, Plumber & Carpenter",
-      "description": "Trusted home repair and maintenance services",
-      "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      "name": "Maid & Cooking",
+      "description": "Instant maid and cooking services at home",
+      "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 301,
-          "name": "Electrician",
-          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Instant Maid",
+          "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 10,
-              "name": "Switch/Socket Replacement",
-              "price": "₹49",
+              "id": 19,
+              "name": "Instant Maid",
+              "price": "₹99/hour",
               "originalPrice": null,
               "rating": 4.85,
-              "reviews": 70000,
-              "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "reviews": 15000,
+              "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
-              "popularSearch": true
-            },
-            {
-              "id": 11,
-              "name": "Fan Repair (Ceiling/Exhaust/Wall)",
-              "price": "₹109",
-              "originalPrice": null,
-              "rating": 4.82,
-              "reviews": 98000,
-              "image": "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true
+              "popularSearch": true,
+              "duration": "Per hour",
+              "slot": "7 AM – 9 PM",
+              "includes": ["Cleaning", "Basic household help"]
             }
           ]
         },
         {
           "id": 302,
-          "name": "Plumber",
-          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Cooking Services",
+          "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 12,
-              "name": "Tap Replacement",
-              "price": "₹59",
+              "id": 20,
+              "name": "1 Time Cooking",
+              "price": "₹199",
               "originalPrice": null,
-              "rating": 4.84,
-              "reviews": 42000,
-              "image": "https://images.pexels.com/photos/6444968/pexels-photo-6444968.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "rating": 4.80,
+              "reviews": 8600,
+              "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
-              "popularSearch": true
+              "popularSearch": true,
+              "slot": "Morning / Afternoon / Evening",
+              "includes": ["Roti, sabzi, dal, rice (as per requirement)"]
             },
             {
-              "id": 13,
-              "name": "Connection Hose Installation",
-              "price": "₹79",
+              "id": 21,
+              "name": "2 Time Cooking",
+              "price": "₹399",
               "originalPrice": null,
-              "rating": 4.81,
-              "reviews": 23000,
-              "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": false,
-              "popularSearch": false
-            }
-          ]
-        },
-        {
-          "id": 303,
-          "name": "Carpenter",
-          "image": "https://images.pexels.com/photos/3825584/pexels-photo-3825584.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 14,
-              "name": "Drill & Hang (Wall Decor)",
-              "price": "₹49",
-              "originalPrice": null,
-              "rating": 4.86,
-              "reviews": 101000,
-              "image": "https://images.pexels.com/photos/5974388/pexels-photo-5974388.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "rating": 4.82,
+              "reviews": 6500,
+              "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
-              "popularSearch": true
+              "popularSearch": true,
+              "slot": "Morning & Evening",
+              "includes": ["Roti, sabzi, dal, rice (as per requirement)"]
+            },
+            {
+              "id": 22,
+              "name": "Full Day Cooking",
+              "price": "₹699",
+              "originalPrice": null,
+              "rating": 4.88,
+              "reviews": 4200,
+              "image": "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "popular": true,
+              "popularSearch": true,
+              "slot": "Full Day",
+              "includes": ["Roti, sabzi, dal, rice (as per requirement)"]
             }
           ]
         }
@@ -347,386 +457,51 @@
     },
     {
       "id": 4,
-      "name": "AC & Appliance Repair",
-      "description": "Professional appliance repair and maintenance",
-      "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop",
+      "name": "Instant Technical",
+      "description": "Electrician, laundry & quick repair services",
+      "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "bannerImage": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
       "popular": true,
       "subCategories": [
         {
           "id": 401,
-          "name": "AC Service and Repair",
-          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Electrician",
+          "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
             {
-              "id": 15,
-              "name": "AC Service & Repair",
-              "price": "₹299",
-              "originalPrice": "₹499",
-              "rating": 4.78,
-              "reviews": 456000,
-              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "id": 23,
+              "name": "Instant Electrician",
+              "price": "₹59",
+              "originalPrice": null,
+              "rating": 4.85,
+              "reviews": 12000,
+              "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
-              "discount": "40% OFF"
+              "duration": "30–60 mins",
+              "includes": ["Minor repairs", "Switch fixing", "Fan repair"],
+              "note": "₹59 Visiting Charge"
             }
           ]
         },
         {
           "id": 402,
-          "name": "Washing Machine Repair",
-          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "name": "Laundry",
+          "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
           "popular": true,
           "products": [
-            {
-              "id": 16,
-              "name": "Automatic Top Load Machine Check-up",
-              "price": "₹99",
-              "originalPrice": null,
-              "rating": 4.79,
-              "reviews": 322000,
-              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true
-            }
-          ]
-        },
-        {
-          "id": 403,
-          "name": "Water Purifier Repair",
-          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 17,
-              "name": "Water Purifier Check-up",
-              "price": "₹299",
-              "originalPrice": null,
-              "rating": 4.79,
-              "reviews": 146000,
-              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true
-            }
-          ]
-        },
-        {
-          "id": 404,
-          "name": "Chimney Cleaning",
-          "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 18,
-              "name": "Chimney Cleaning",
-              "price": "₹599",
-              "originalPrice": null,
-              "rating": 4.84,
-              "reviews": 135000,
-              "image": "https://images.pexels.com/photos/2209170/pexels-photo-2209170.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Spa for Women",
-      "description": "Relaxing spa and wellness treatments",
-      "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 501,
-          "name": "Stress Relief",
-          "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 19,
-              "name": "Stress Relief Massage",
-              "price": "₹1,299",
-              "originalPrice": "₹1,699",
-              "rating": 4.82,
-              "reviews": 45000,
-              "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "24% OFF"
-            }
-          ]
-        },
-        {
-          "id": 502,
-          "name": "Pain Relief",
-          "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 20,
-              "name": "Pain Relief Massage",
-              "price": "₹1,399",
-              "originalPrice": "₹1,799",
-              "rating": 4.79,
-              "reviews": 38000,
-              "image": "https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "22% OFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Salon for Men",
-      "description": "Professional grooming services for men",
-      "image": "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691651/pexels-photo-5691651.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 601,
-          "name": "Haircut & Beard Styling",
-          "image": "https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 21,
-              "name": "Premium Haircut & Beard",
-              "price": "₹499",
-              "originalPrice": "₹699",
-              "rating": 4.74,
-              "reviews": 89000,
-              "image": "https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "29% OFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Massage for Men",
-      "description": "Professional massage and wellness services",
-      "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 701,
-          "name": "Pain Relief",
-          "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 22,
-              "name": "Deep Tissue Massage",
-              "price": "₹1,199",
-              "originalPrice": "₹1,599",
-              "rating": 4.78,
-              "reviews": 56000,
-              "image": "https://images.pexels.com/photos/3777017/pexels-photo-3777017.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "25% OFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Home Care Services",
-      "description": "Trusted caregivers, drivers, nurses and support staff",
-      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 801,
-          "name": "Driver",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 23,
-              "name": "Personal Driver (Part Time)",
-              "price": "₹800/day",
-              "originalPrice": "₹1,000/day",
-              "rating": 4.7,
-              "reviews": 12000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "20% OFF"
-            },
             {
               "id": 24,
-              "name": "Personal Driver (Full Time)",
-              "price": "₹15,000/month",
-              "originalPrice": "₹18,000/month",
-              "rating": 4.8,
-              "reviews": 8500,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
+              "name": "Instant Laundry",
+              "price": "₹49",
+              "originalPrice": null,
+              "rating": 4.72,
+              "reviews": 3500,
+              "image": "https://images.pexels.com/photos/4239116/pexels-photo-4239116.jpeg?auto=compress&cs=tinysrgb&w=800",
               "popular": true,
               "popularSearch": true,
-              "discount": "17% OFF"
-            }
-          ]
-        },
-        {
-          "id": 802,
-          "name": "Nurse",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 25,
-              "name": "Home Care Nurse (8 Hours)",
-              "price": "₹1,200/day",
-              "originalPrice": "₹1,500/day",
-              "rating": 4.9,
-              "reviews": 15000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "20% OFF"
-            },
-            {
-              "id": 26,
-              "name": "Home Care Nurse (12 Hours)",
-              "price": "₹1,800/day",
-              "originalPrice": "₹2,200/day",
-              "rating": 4.8,
-              "reviews": 12000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "18% OFF"
-            },
-            {
-              "id": 27,
-              "name": "Elderly Care Nurse (24 Hours)",
-              "price": "₹2,500/day",
-              "originalPrice": "₹3,000/day",
-              "rating": 4.9,
-              "reviews": 9500,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": false,
-              "popularSearch": true,
-              "discount": "17% OFF"
-            }
-          ]
-        },
-        {
-          "id": 803,
-          "name": "Cook",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 28,
-              "name": "Home Cook (Part Time)",
-              "price": "₹8,000/month",
-              "originalPrice": "₹10,000/month",
-              "rating": 4.6,
-              "reviews": 18000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "20% OFF"
-            },
-            {
-              "id": 29,
-              "name": "Home Cook (Full Time)",
-              "price": "₹12,000/month",
-              "originalPrice": "₹15,000/month",
-              "rating": 4.7,
-              "reviews": 14000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "20% OFF"
-            },
-            {
-              "id": 30,
-              "name": "Professional Chef (Events)",
-              "price": "₹2,500/event",
-              "originalPrice": "₹3,200/event",
-              "rating": 4.8,
-              "reviews": 6500,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": false,
-              "popularSearch": false,
-              "discount": "22% OFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Native Water Purifier",
-      "description": "Premium water purification solutions",
-      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 901,
-          "name": "Water Purifier Installation",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 31,
-              "name": "Native RO + UV + UF",
-              "price": "₹14,999",
-              "originalPrice": "₹18,999",
-              "rating": 4.82,
-              "reviews": 12000,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "21% OFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "Native Smart Locks",
-      "description": "Advanced home security solutions",
-      "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "bannerImage": "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-      "popular": true,
-      "subCategories": [
-        {
-          "id": 1001,
-          "name": "Smart Lock Installation",
-          "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "popular": true,
-          "products": [
-            {
-              "id": 32,
-              "name": "Native Smart Lock Pro",
-              "price": "₹9,999",
-              "originalPrice": "₹12,999",
-              "rating": 4.75,
-              "reviews": 8500,
-              "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-              "popular": true,
-              "popularSearch": true,
-              "discount": "23% OFF"
+              "includes": ["Basic cloth wash (per session)", "Pickup & Drop (selected areas)"]
             }
           ]
         }
@@ -735,98 +510,94 @@
   ],
   "mostBookedServices": [
     {
-      "id": 4,
-      "name": "Intense Bathroom Cleaning",
-      "price": "₹519",
-      "rating": 4.79,
-      "reviews": 290000,
-      "categoryId": 2,
-      "subCategoryId": 201
-    },
-    {
-      "id": 5,
-      "name": "Intense Cleaning (2 Bathrooms)",
-      "price": "₹960",
-      "originalPrice": "₹1,038",
-      "rating": 4.79,
-      "reviews": 290000,
-      "categoryId": 2,
-      "subCategoryId": 201
-    },
-    {
-      "id": 2,
-      "name": "Sara Lightening Glow Facial",
-      "price": "₹899",
-      "originalPrice": "₹949",
-      "rating": 4.84,
-      "reviews": 145000,
+      "id": 3,
+      "name": "Room Cleaning",
+      "price": "₹49",
+      "rating": 4.90,
+      "reviews": 25000,
       "categoryId": 1,
       "subCategoryId": 102
     },
     {
-      "id": 16,
-      "name": "Automatic Top Load Machine Check-up",
-      "price": "₹99",
-      "rating": 4.79,
-      "reviews": 322000,
-      "categoryId": 4,
-      "subCategoryId": 402
+      "id": 1,
+      "name": "Kitchen Cleaning",
+      "price": "₹149",
+      "rating": 4.85,
+      "reviews": 12000,
+      "categoryId": 1,
+      "subCategoryId": 101
     },
     {
-      "id": 10,
-      "name": "Switch/Socket Replacement",
-      "price": "₹49",
+      "id": 19,
+      "name": "Instant Maid",
+      "price": "₹99/hour",
       "rating": 4.85,
-      "reviews": 70000,
+      "reviews": 15000,
       "categoryId": 3,
       "subCategoryId": 301
     },
     {
-      "id": 17,
-      "name": "Water Purifier Check-up",
-      "price": "₹299",
+      "id": 4,
+      "name": "Bathroom Cleaning",
+      "price": "₹199",
       "rating": 4.79,
-      "reviews": 146000,
-      "categoryId": 4,
-      "subCategoryId": 403
-    },
-    {
-      "id": 7,
-      "name": "Classic Bathroom Cleaning",
-      "price": "₹429",
-      "rating": 4.82,
-      "reviews": 150000,
-      "categoryId": 2,
-      "subCategoryId": 201
-    },
-    {
-      "id": 18,
-      "name": "Chimney Cleaning",
-      "price": "₹599",
-      "rating": 4.84,
-      "reviews": 135000,
-      "categoryId": 4,
-      "subCategoryId": 404
+      "reviews": 18000,
+      "categoryId": 1,
+      "subCategoryId": 102
     },
     {
       "id": 6,
-      "name": "Kitchen Deep Cleaning",
-      "price": "₹649",
-      "originalPrice": "₹799",
-      "rating": 4.75,
-      "reviews": 125000,
+      "name": "Full House Cleaning",
+      "price": "₹499",
+      "rating": 4.80,
+      "reviews": 15000,
+      "categoryId": 1,
+      "subCategoryId": 103
+    },
+    {
+      "id": 23,
+      "name": "Instant Electrician",
+      "price": "₹59",
+      "rating": 4.85,
+      "reviews": 12000,
+      "categoryId": 4,
+      "subCategoryId": 401
+    },
+    {
+      "id": 20,
+      "name": "1 Time Cooking",
+      "price": "₹199",
+      "rating": 4.80,
+      "reviews": 8600,
+      "categoryId": 3,
+      "subCategoryId": 302
+    },
+    {
+      "id": 7,
+      "name": "Deep House Cleaning",
+      "price": "₹1,299",
+      "rating": 4.85,
+      "reviews": 6200,
+      "categoryId": 1,
+      "subCategoryId": 103
+    },
+    {
+      "id": 11,
+      "name": "Chimney Servicing",
+      "price": "₹599",
+      "rating": 4.84,
+      "reviews": 4200,
       "categoryId": 2,
       "subCategoryId": 201
     },
     {
-      "id": 25,
-      "name": "Home Care Nurse (8 Hours)",
-      "price": "₹1,200/day",
-      "originalPrice": "₹1,500/day",
-      "rating": 4.9,
-      "reviews": 15000,
-      "categoryId": 8,
-      "subCategoryId": 802
+      "id": 9,
+      "name": "Gas Choolha Cleaning",
+      "price": "₹49",
+      "rating": 4.82,
+      "reviews": 8000,
+      "categoryId": 2,
+      "subCategoryId": 201
     }
   ]
 }
