@@ -80,7 +80,7 @@ export function PopularServices() {
               <Button
                 size="lg"
                 variant="outline"
-                className="min-w-[180px] border-2 border-[#204099] text-[#204099] hover:bg-[#204099]/5 transition-all duration-300"
+                className="min-w-[180px] border-2 border-[#204099] dark:border-blue-400 text-[#204099] dark:text-blue-400 hover:bg-[#204099]/5 dark:hover:bg-blue-900/30 transition-all duration-300"
               >
                 Browse All Services
               </Button>
@@ -208,7 +208,7 @@ function ServiceCard({ service, isMobile }: { service: any; isMobile: boolean })
               {/* Zepto Style 'Add' Button */}
               <div className="relative group/btn">
                 <button
-                  className="bg-blue-50 dark:bg-blue-900/30 text-[#204099] dark:text-blue-400 hover:bg-[#204099] hover:text-white font-bold py-2 px-5 rounded-xl transition-all duration-300 flex items-center gap-1 shadow-sm border border-blue-100 dark:border-blue-800/50"
+                  className="bg-blue-50 dark:bg-blue-900/30 text-[#204099] dark:text-blue-400 hover:bg-[#204099] dark:hover:bg-blue-600 hover:text-white font-bold py-2 px-5 rounded-xl transition-all duration-300 flex items-center gap-1 shadow-sm border border-blue-100 dark:border-blue-800/50"
                   onClick={(e) => {
                     e.preventDefault(); // Prevent link navigation if just adding to cart
                     console.log("Added to cart", service.id);

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Connect with skilled professionals for all your home service needs. Book instantly, get it done right.",
 };
 
-import GlobalSlideDownSearch from "@/components/layout/GlobalSlideDownSearch";
+
 
 export default function RootLayout({
   children,
@@ -41,7 +41,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <GlobalSlideDownSearch />
           {children}
           <MobileBottomNav />
           {/* <Toaster /> */}

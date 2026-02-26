@@ -25,7 +25,7 @@ export default function PopularSearches({ items, onSelect }: PopularSearchesProp
               <button
                 key={`${search}-${index}`}
                 onClick={() => onSelect?.(search)}
-                className="shrink-0 rounded-full border border-[#204099] px-3 py-1.5 text-xs font-medium text-[#204099] hover:bg-[#204099]/5 active:scale-95 transition"
+                className="shrink-0 rounded-full border border-[#204099] dark:border-blue-800 px-3 py-1.5 text-xs font-medium text-[#204099] dark:text-blue-400 hover:bg-[#204099]/5 dark:hover:bg-blue-900/20 active:scale-95 transition"
               >
                 {search}
               </button>
@@ -40,7 +40,7 @@ export default function PopularSearches({ items, onSelect }: PopularSearchesProp
               key={`${search}-${index}`}
               variant="outline"
               size="sm"
-              className="rounded-full border-[#204099] text-[#204099] hover:bg-[#204099]/5"
+              className="rounded-full border-[#204099] dark:border-blue-800 text-[#204099] dark:text-blue-400 hover:bg-[#204099]/5 dark:hover:bg-blue-900/20"
               onClick={() => onSelect?.(search)}
             >
               {search}

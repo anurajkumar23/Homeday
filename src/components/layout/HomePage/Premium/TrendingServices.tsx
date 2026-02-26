@@ -31,7 +31,7 @@ export default function TrendingServices() {
                 <div className="flex justify-between items-end mb-8 md:mb-12">
                     <div className="max-w-xl">
                         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-                            Trending <span className="text-[#204099]">Services</span>
+                            Trending <span className="text-[#204099] dark:text-blue-400">Services</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400">
                             Most booked services by our community this week. High quality, vetted professionals.
@@ -68,7 +68,7 @@ export default function TrendingServices() {
                                     </div>
 
                                     <div className="p-5 md:p-6">
-                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-1 group-hover:text-[#204099] transition-colors truncate">
+                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-1 group-hover:text-[#204099] dark:group-hover:text-blue-400 transition-colors truncate">
                                             {service.name}
                                         </h3>
                                         <div className="flex items-center justify-between mt-4">
@@ -78,7 +78,7 @@ export default function TrendingServices() {
                                                     {service.price}
                                                 </span>
                                             </div>
-                                            <div className="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-900 flex items-center justify-center group-hover:bg-[#204099] group-hover:text-white transition-colors duration-300">
+                                            <div className="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-900 flex items-center justify-center group-hover:bg-[#204099] dark:group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                                                 <ChevronRight className="w-5 h-5" />
                                             </div>
                                         </div>

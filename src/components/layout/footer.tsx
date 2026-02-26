@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -78,9 +79,9 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-[#204099]">Company</h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
-                <a href="#" className="hover:text-[#204099] transition-colors">
+                <Link href="/about" className="hover:text-[#204099] transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-[#204099] transition-colors">

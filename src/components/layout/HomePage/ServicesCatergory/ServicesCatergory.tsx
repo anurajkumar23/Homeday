@@ -133,9 +133,14 @@ export default function ServiceCategories() {
                       <div className="flex items-center gap-3 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
-                          <span>60 min</span>
+                          <span>{(p as any).duration || "60 min"}</span>
                         </div>
-                        <div className="flex items-center gap-1 text-green-600 dark:text-green-500">
+                        {(p as any).slot && (
+                          <div className="flex items-center gap-1 relative overflow-hidden max-w-[80px]">
+                            <span className="truncate">{(p as any).slot}</span>
+                          </div>
+                        )}
+                        <div className="flex items-center gap-1 text-green-600 dark:text-green-500 ml-auto">
                           <Shield className="h-3 w-3" />
                           <span>Verified</span>
                         </div>

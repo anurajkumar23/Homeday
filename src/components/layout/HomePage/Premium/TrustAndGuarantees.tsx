@@ -4,17 +4,17 @@ import { ShieldCheck, Sparkles, Clock, ArrowUpRight } from "lucide-react";
 
 const guarantees = [
     {
-        icon: <ShieldCheck className="w-8 h-8 text-[#204099]" />,
+        icon: <ShieldCheck className="w-8 h-8 text-[#204099] dark:text-blue-400" />,
         title: "100% Verified Professionals",
         description: "Every service partner undergoes strict background checks and skill verification before joining us.",
     },
     {
-        icon: <Sparkles className="w-8 h-8 text-[#204099]" />,
+        icon: <Sparkles className="w-8 h-8 text-[#204099] dark:text-blue-400" />,
         title: "Safe & Premium Products",
         description: "We only use industry-grade, non-toxic, and genuine products to ensure maximum safety.",
     },
     {
-        icon: <Clock className="w-8 h-8 text-[#204099]" />,
+        icon: <Clock className="w-8 h-8 text-[#204099] dark:text-blue-400" />,
         title: "On-Time Service Guarantee",
         description: "We value your time. If our professional is late, you get a flat discount on your service.",
     },
@@ -34,7 +34,7 @@ export default function TrustAndGuarantees() {
                         </div>
                         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
                             Premium services, <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#204099] to-blue-500">zero compromises.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#204099] to-blue-500 dark:from-blue-400 dark:to-cyan-400">zero compromises.</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
                             We stand behind our work. Homeday brings the highest standards of safety, quality, and professionalism right to your doorstep.

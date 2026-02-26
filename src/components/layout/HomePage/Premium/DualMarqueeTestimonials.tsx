@@ -79,7 +79,7 @@ export default function DualMarqueeTestimonials() {
 
                 {/* Row 2 - Right to Left */}
                 <div className="flex w-max animate-marquee-reverse gap-6 -ml-32">
-                    {[...reviews.reverse(), ...reviews].map((review, i) => (
+                    {[...[...reviews].reverse(), ...[...reviews].reverse()].map((review, i) => (
                         <div
                             key={`r2-${i}`}
                             className="w-[350px] md:w-[400px] bg-white dark:bg-gray-950 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800"

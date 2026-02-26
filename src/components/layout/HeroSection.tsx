@@ -1,28 +1,15 @@
-
 "use client";
 
-import { useState } from "react";
-import { Search, MapPin, Calendar, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
+import { motion } from "motion/react";
 import ServiceShowcase from "./HomePage/HeroCard/ShowCase";
 import StickyCategoriesBar from "./HomePage/ServicesCatergory/StickyCategoriesBar";
-// MobileStickySearch was moved into Navbar compact mode
 import MobileCategoriesGrid from "./HomePage/ServicesCatergory/MobileCategoriesGrid";
-import MobileStickySearch from "./HomePage/MobileStickySearch";
 import PopularSearches from "./HomePage/PopularSearches/PopularSearches";
-import ServiceBanner from "@/components/layout/HomePage/Banner/ServiceBanner"
-import servicesData from "@/data/services.json"
+import ServiceBanner from "@/components/layout/HomePage/Banner/ServiceBanner";
+import servicesData from "@/data/services.json";
+import { Shield, Star, Clock, Users } from "lucide-react";
 
 export function HeroSection() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useState("");
-
-  const handleSearch = () => {
-    console.log("Searching for:", searchQuery, "in", location);
-  };
-
   const popularSearches = servicesData.categories
     .flatMap((c: any) => c.subCategories || [])
     .flatMap((sc: any) => sc.products || [])
@@ -33,96 +20,109 @@ export function HeroSection() {
   return (
     <>
       <StickyCategoriesBar />
-      <div>
+
+      {/* Mobile categories + banner */}
+      <div className="md:hidden">
         <MobileCategoriesGrid />
       </div>
-      <div className="md:hidden block bg-white pb-4">
+      <div className="md:hidden block bg-white dark:bg-gray-950 pb-4">
         <ServiceBanner />
       </div>
-      <section className="hidden md:block relative bg-gradient-to-br pb-4 from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-800 md:py-20 overflow-hidden">
-        {/* Background Blobs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#204099]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#204099]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
 
-        {/* Full-bleed mobile categories slider */}
+      {/* ═══ Desktop Hero Section ═══ */}
+      <section className="hidden md:block relative bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-950 dark:to-gray-900 pt-12 pb-20 overflow-hidden">
+        {/* Background blobs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#204099]/5 dark:bg-blue-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#204099]/5 dark:bg-purple-600/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
 
-
-        {/* <MobileStickySearch /> */}
-        <div className="container mx-auto relative z-10">
-          <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <div className="space-y-4 ">
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Find trusted
-                  <span className="text-primary block">local services</span>
+        <div className="container mx-auto relative z-10 px-4 md:px-8">
+          <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
+            {/* ── Left content ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="space-y-8"
+            >
+              <div className="space-y-4">
+                <h1 className="text-4xl lg:text-[3.5rem] font-extrabold text-gray-900 dark:text-white leading-[1.1] tracking-tight">
+                  Home Services,{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#204099] to-blue-500">
+                    Made Easy
+                  </span>
                 </h1>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-lg">
-                  Connect with skilled professionals for all your home service needs.
-                  Book instantly, get it done right.
+                <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg font-medium leading-relaxed">
+                  Book verified professionals for cleaning, cooking, repairs & more. Starting from just ₹49.
                 </p>
               </div>
 
-              {/* Search Form */}
-              <Card className="p-8 shadow-2xl shadow-blue-900/5 dark:shadow-none rounded-[2rem] hidden md:block border border-gray-200/50 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl mt-8">
-                <div className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                      <Input
-                        type="text"
-                        placeholder="What service do you need?"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-10 h-12"
-                      />
-                    </div>
-                    <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                      <Input
-                        type="text"
-                        placeholder="Enter your location"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                        className="pl-10 h-12"
-                      />
-                    </div>
-                  </div>
-                  <Button
-                    onClick={handleSearch}
-                    className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#204099] to-[#173172] hover:from-[#183a8a] hover:to-[#122a64] text-white rounded-xl shadow-lg shadow-[#204099]/20 transition-all duration-300 hover:shadow-[#204099]/40 hover:-translate-y-0.5"
-                    size="lg"
-                  >
-                    Find Services
-                  </Button>
-                </div>
-              </Card>
-
-              {/* Mobile categories grid moved above container for full-bleed */}
-
               {/* Popular Searches */}
-              <PopularSearches
-                items={popularSearches}
-                onSelect={(val) => setSearchQuery(val)}
-              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <PopularSearches
+                  items={popularSearches}
+                  onSelect={() => { }}
+                />
+              </motion.div>
 
-              {/* Stats */}
-              <div className="md:grid grid-cols-3 gap-6 pl-4 pr-4 pt-8 hidden">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">50K+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Service Providers</div>
+              {/* Trust Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="grid grid-cols-4 gap-5 pt-6 border-t border-gray-200/60 dark:border-gray-800"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center h-9 w-9 rounded-xl bg-blue-50 dark:bg-blue-900/30">
+                    <Users className="h-4 w-4 text-[#204099] dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-gray-900 dark:text-white leading-none">50K+</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Verified Pros</div>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">1M+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Happy Customers</div>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center h-9 w-9 rounded-xl bg-green-50 dark:bg-green-900/30">
+                    <Shield className="h-4 w-4 text-green-600 dark:text-green-400" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-gray-900 dark:text-white leading-none">1M+</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Customers</div>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">4.8★</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Average Rating</div>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center h-9 w-9 rounded-xl bg-yellow-50 dark:bg-yellow-900/30">
+                    <Star className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-gray-900 dark:text-white leading-none">4.8★</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Rating</div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <ServiceShowcase />
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center h-9 w-9 rounded-xl bg-purple-50 dark:bg-purple-900/30">
+                    <Clock className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-black text-gray-900 dark:text-white leading-none">90min</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Arrival</div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* ── Right - Service showcase grid ── */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="hidden lg:block relative"
+            >
+              <ServiceShowcase />
+            </motion.div>
           </div>
         </div>
       </section>
