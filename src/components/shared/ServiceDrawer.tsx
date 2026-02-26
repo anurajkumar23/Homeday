@@ -14,20 +14,93 @@ export function ServiceDrawer({ children, product, categoryName }: ServiceDrawer
     const [open, setOpen] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
 
+    // Touch gesture states
+    const [touchStartY, setTouchStartY] = useState<number | null>(null);
+    const [touchCurrentY, setTouchCurrentY] = useState<number | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
+
     if (!product) return <>{children}</>;
 
     const handleOpen = useCallback(() => setOpen(true), []);
-    const handleClose = useCallback(() => setOpen(false), []);
+    const handleClose = useCallback(() => {
+        setOpen(false);
+        setTouchStartY(null);
+        setTouchCurrentY(null);
+        setIsDragging(false);
+    }, []);
 
-    // Lock body scroll when drawer is open
+    // Lock body scroll and intercept Hardware Back Button
     useEffect(() => {
+        const handlePopState = () => {
+            if (open && window.location.hash !== '#service') {
+                setOpen(false);
+            }
+        };
+
         if (open) {
             document.body.style.overflow = 'hidden';
+            window.history.pushState(null, '', window.location.pathname + window.location.search + '#service');
+            window.addEventListener('popstate', handlePopState);
         } else {
             document.body.style.overflow = '';
+            if (window.location.hash === '#service') {
+                window.history.back();
+            }
         }
-        return () => { document.body.style.overflow = ''; };
+
+        return () => {
+            document.body.style.overflow = '';
+            window.removeEventListener('popstate', handlePopState);
+        };
     }, [open]);
+
+    // Touch Event Handlers for Swipe-to-Close
+    const handleTouchStart = (e: React.TouchEvent) => {
+        // Only initiate drag if scroll is at the top
+        if (scrollRef.current && scrollRef.current.scrollTop === 0) {
+            setTouchStartY(e.touches[0].clientY);
+            setIsDragging(true);
+        }
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (!isDragging || touchStartY === null) return;
+
+        const currentY = e.touches[0].clientY;
+        const deltaY = currentY - touchStartY;
+
+        // Prevent scrolling up beyond origin (rubber banding), only allow dragging down
+        if (deltaY > 0) {
+            e.preventDefault(); // Prevent default scroll while dragging down
+            setTouchCurrentY(currentY);
+        }
+    };
+
+    const handleTouchEnd = () => {
+        if (!isDragging || touchStartY === null || touchCurrentY === null) {
+            setIsDragging(false);
+            setTouchStartY(null);
+            setTouchCurrentY(null);
+            return;
+        }
+
+        const deltaY = touchCurrentY - touchStartY;
+
+        // If dragged down by more than 100px, close the drawer
+        if (deltaY > 100) {
+            handleClose();
+        } else {
+            // Otherwise, snap back
+            setTouchCurrentY(null);
+            setTouchStartY(null);
+        }
+        setIsDragging(false);
+    };
+
+    // Calculate Y translation visually during drag
+    const translateY = isDragging && touchStartY !== null && touchCurrentY !== null
+        ? Math.max(0, touchCurrentY - touchStartY)
+        : 0;
 
     return (
         <>
@@ -47,13 +120,25 @@ export function ServiceDrawer({ children, product, categoryName }: ServiceDrawer
                     <div
                         className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
                         onClick={handleClose}
+                        style={{ opacity: isDragging ? Math.max(0, 1 - translateY / 300) : 1 }}
                     />
 
                     {/* Drawer Panel */}
-                    <div className="absolute bottom-0 left-0 right-0 md:left-auto md:top-0 md:right-0 md:w-[480px] max-h-[92vh] md:max-h-full md:h-full bg-white dark:bg-gray-900 rounded-t-[2rem] md:rounded-none md:rounded-l-[2rem] shadow-2xl flex flex-col animate-in slide-in-from-bottom duration-300 md:animate-in md:slide-in-from-right md:duration-300">
+                    <div
+                        className={`absolute bottom-0 left-0 right-0 md:left-auto md:top-0 md:right-0 md:w-[480px] max-h-[92vh] md:max-h-full md:h-full bg-white dark:bg-gray-900 rounded-t-[2rem] md:rounded-none md:rounded-l-[2rem] shadow-2xl flex flex-col ${!isDragging ? 'animate-in slide-in-from-bottom duration-300 md:animate-in md:slide-in-from-right md:duration-300' : ''}`}
+                        style={{
+                            transform: `translateY(${translateY}px)`,
+                            transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+                        }}
+                    >
 
-                        {/* Handle + Close — non-scrollable */}
-                        <div className="relative w-full pt-3 pb-2 flex-shrink-0 bg-white dark:bg-gray-900 rounded-t-[2rem] z-10">
+                        {/* Handle + Close — non-scrollable area to easily grab */}
+                        <div
+                            className="relative w-full pt-3 pb-2 flex-shrink-0 bg-white dark:bg-gray-900 rounded-t-[2rem] z-10 touch-none"
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                        >
                             <div className="flex justify-center mb-1">
                                 <div className="w-10 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full" />
                             </div>

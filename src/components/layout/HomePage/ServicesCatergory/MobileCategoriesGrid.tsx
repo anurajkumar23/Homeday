@@ -30,8 +30,8 @@ export default function MobileCategoriesGrid({
 
   return (
     <div className="w-full bg-white dark:bg-gray-950 md:hidden">
-      <div className="py-3 px-4">
-        <div className="flex gap-5 overflow-x-auto no-scrollbar py-2 px-2">
+      <div className="py-3">
+        <div className="flex gap-5 overflow-x-auto no-scrollbar py-2 px-4">
           {categories.map((category) => {
             const isSelected = selectedId === category.id;
 
@@ -54,7 +54,7 @@ export default function MobileCategoriesGrid({
                       alt={category.name}
                       fill
                       sizes="64px"
-                      className="object-cover"
+                      className="object-cover scale-[1.2]"
                     />
                   ) : (
                     <span className="text-gray-400 font-bold text-lg absolute inset-0 flex items-center justify-center bg-gray-50 dark:bg-gray-800">

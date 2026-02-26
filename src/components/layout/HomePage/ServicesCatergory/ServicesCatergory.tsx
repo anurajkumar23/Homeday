@@ -40,6 +40,74 @@ export default function ServiceCategories() {
 
   const currentSub = category.subCategories?.find(s => s.id === subId);
 
+  /* ───────── Touch Gesture Logic for Mobile Drawer ───────── */
+  const drawerScrollRef = useRef<HTMLDivElement>(null);
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
+  const [touchCurrentY, setTouchCurrentY] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (drawerScrollRef.current && drawerScrollRef.current.scrollTop === 0) {
+      setTouchStartY(e.touches[0].clientY);
+      setIsDragging(true);
+    }
+  };
+
+  // Lock body scroll and intercept Hardware Back Button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (drawerOpen && window.location.hash !== '#category') {
+        setDrawerOpen(false);
+      }
+    };
+
+    if (drawerOpen) {
+      document.body.style.overflow = 'hidden';
+      window.history.pushState(null, '', window.location.pathname + window.location.search + '#category');
+      window.addEventListener('popstate', handlePopState);
+    } else {
+      document.body.style.overflow = '';
+      if (window.location.hash === '#category') {
+        window.history.back();
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [drawerOpen]);
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || touchStartY === null) return;
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - touchStartY;
+    if (deltaY > 0) {
+      e.preventDefault();
+      setTouchCurrentY(currentY);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging || touchStartY === null || touchCurrentY === null) {
+      setIsDragging(false);
+      setTouchStartY(null);
+      setTouchCurrentY(null);
+      return;
+    }
+    const deltaY = touchCurrentY - touchStartY;
+    if (deltaY > 100) {
+      setDrawerOpen(false);
+    }
+    setTouchCurrentY(null);
+    setTouchStartY(null);
+    setIsDragging(false);
+  };
+
+  const translateY = isDragging && touchStartY !== null && touchCurrentY !== null
+    ? Math.max(0, touchCurrentY - touchStartY)
+    : 0;
+
   /* ───────── Reusable Details Panel ───────── */
   const Details = (
     <div key={animateKey} className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
@@ -79,7 +147,7 @@ export default function ServiceCategories() {
               >
                 <div className={`relative h-14 w-14 overflow-hidden rounded-full mb-2 transition-transform duration-300
                   ${isSelected ? 'scale-110 shadow-md' : 'group-hover:scale-105'}`}>
-                  <Image src={sub.image} alt={sub.name} fill className="object-cover" unoptimized />
+                  <Image src={sub.image} alt={sub.name} fill className="object-cover scale-[1.2]" unoptimized />
                 </div>
                 <span className={`text-xs font-semibold text-center leading-tight transition-colors
                   ${isSelected ? 'text-primary dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}>
@@ -218,7 +286,7 @@ export default function ServiceCategories() {
                       }`}
                   >
                     <div className={`relative h-12 w-12 overflow-hidden rounded-xl flex-shrink-0 transition-transform duration-200 ${isActive ? 'scale-105' : 'group-hover:scale-105'}`}>
-                      <Image src={c.image} alt={c.name} fill className="object-cover" unoptimized />
+                      <Image src={c.image} alt={c.name} fill className="object-cover scale-[1.2]" unoptimized />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className={`font-semibold text-sm truncate transition-colors ${isActive ? 'text-primary dark:text-blue-400' : 'text-gray-800 dark:text-gray-200'}`}>{c.name}</h4>
@@ -240,18 +308,56 @@ export default function ServiceCategories() {
         </div>
       </section>
 
-      {/* Mobile Category Drawer — rendered OUTSIDE the hidden section */}
-      <Sheet open={drawerOpen} onOpenChange={setDrawerOpen}>
-        <SheetContent
-          side="bottom"
-          className="h-[85vh] rounded-t-3xl p-6 md:hidden overflow-y-auto"
-        >
-          <SheetHeader className="mb-4 text-center">
-            <SheetTitle className="text-xl font-semibold">{category.name}</SheetTitle>
-          </SheetHeader>
-          {Details}
-        </SheetContent>
-      </Sheet>
+      {/* Mobile Category Drawer — Custom Swipeable Sheet */}
+      {drawerOpen && (
+        <div className="md:hidden fixed inset-0 z-[150] touch-none">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+            onClick={() => setDrawerOpen((o) => !o)}
+            style={{ opacity: isDragging ? Math.max(0, 1 - translateY / 300) : 1 }}
+          />
+
+          {/* Drawer Panel */}
+          <div
+            className={`absolute bottom-0 left-0 right-0 h-[85vh] bg-white dark:bg-gray-950 rounded-t-3xl shadow-2xl flex flex-col ${!isDragging ? 'animate-in slide-in-from-bottom duration-300' : ''}`}
+            style={{
+              transform: `translateY(${translateY}px)`,
+              transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+            }}
+          >
+            {/* Handle area to swipe */}
+            <div
+              className="w-full pt-4 pb-2 flex-shrink-0 bg-white dark:bg-gray-950 rounded-t-3xl shadow-sm z-10 touch-none flex flex-col items-center relative"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div className="w-12 h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mb-4 absolute top-4" />
+              <div className="w-full flex justify-between items-center mt-2 px-4">
+                <h2 className="text-xl font-bold dark:text-white truncate pr-8">{category.name}</h2>
+              </div>
+
+              <button
+                onClick={() => setDrawerOpen(false)}
+                className="absolute right-4 top-4 p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 transition-colors"
+                aria-label="Close"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+              </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div
+              ref={drawerScrollRef}
+              className="flex-1 overflow-y-auto px-5 pb-8 overscroll-contain"
+              style={{ WebkitOverflowScrolling: 'touch' }}
+            >
+              {Details}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
